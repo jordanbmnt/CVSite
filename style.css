@@ -11,6 +11,7 @@
     "ps ps  skl skl skl ach    ach"
     "p  p   skl skl skl con    con"
     "p  p   skl skl skl con    con";
+    grid-gap: 10px;
 }
 
 .inactive {
