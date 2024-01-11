@@ -1,7 +1,18 @@
+body{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #080b10;
+  height: 100vh;
+  width: 100vw;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+}
+
 .container {
-  margin: auto;
   width: 95svw;
-  height: 97svh;
+  height: 93svh;
   display: grid;
   grid-template-areas:
     "lh  lh  lh  lh  lh  xpEdu xpEdu"
@@ -11,7 +22,7 @@
     "ps ps  skl skl skl ach    ach"
     "p  p   skl skl skl con    con"
     "p  p   skl skl skl con    con";
-  grid-gap: 10px;
+  grid-gap: 12px;
 }
 
 .inactive {
@@ -57,13 +68,24 @@
 .⏹️,
 .flip-card-front,
 .flip-card-back {
-  background-color: #bbb;
+  background: rgba( 67, 82, 123, 0.25 );
+  box-shadow: 3px 4px 5px 0 rgba(31, 38, 135, 0.147);
+  backdrop-filter: blur( 4px );
+  -webkit-backdrop-filter: blur( 4px );
+  border-radius: 10px;
 }
 
 .flip-card-front:has(.icon) {
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+.icon{
+  padding: 10px;
+  border-radius: 79px;
+box-shadow:  28px 28px 69px #0d1118bc,
+             -28px -28px 69px #1d253473;
 }
 
 /* The flip card container - set the width and height to whatever you want. We have added the border property to demonstrate that the flip itself goes out of the box on hover (remove perspective if you don't want the 3D effect */
