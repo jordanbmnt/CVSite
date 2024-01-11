@@ -1,4 +1,4 @@
-body{
+body {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -43,6 +43,8 @@ body{
 
 .skills {
   grid-area: skl;
+  max-width: 30vw;
+  min-width: 30vw;
 }
 
 .xp-edu {
@@ -67,25 +69,46 @@ body{
 
 .⏹️,
 .flip-card-front,
-.flip-card-back {
-  background: rgba( 67, 82, 123, 0.25 );
+.flip-card-back,
+.card /*Ignore this*/ {
+  background: rgba(67, 82, 123, 0.25);
   box-shadow: 3px 4px 5px 0 rgba(31, 38, 135, 0.147);
-  backdrop-filter: blur( 4px );
-  -webkit-backdrop-filter: blur( 4px );
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
   border-radius: 10px;
 }
 
-.flip-card-front:has(.icon) {
+.flip-card-front:has(.icon),
+.personality {
   display: flex;
-  justify-content: center;
+  justify-content: space-around;
   align-items: center;
+  flex-flow: row;
 }
 
-.icon{
+.icon {
   padding: 10px;
   border-radius: 79px;
-box-shadow:  28px 28px 69px #0d1118bc,
-             -28px -28px 69px #1d253473;
+  box-shadow: 28px 28px 69px #0d1118bc, -28px -28px 69px #1d253473;
+  animation: pulse 2s infinite;
+}
+
+.personality,
+.personal-statement {
+  max-width: 32vw;
+  min-width: 32vw;
+}
+
+.xp-edu,
+.achievements,
+.contacts {
+  max-width: 32vw;
+  min-width: 32vw;
+}
+
+#personality-icon,
+#personality-info {
+  padding: 0 15px;
 }
 
 /* The flip card container - set the width and height to whatever you want. We have added the border property to demonstrate that the flip itself goes out of the box on hover (remove perspective if you don't want the 3D effect */
@@ -104,11 +127,6 @@ box-shadow:  28px 28px 69px #0d1118bc,
   transform-style: preserve-3d;
 }
 
-/* Do an horizontal flip when you move the mouse over the flip box container */
-.card:hover .flip-card-inner {
-  transform: rotateY(180deg);
-}
-
 /* Position the front and back side */
 .flip-card-front,
 .flip-card-back {
@@ -117,6 +135,7 @@ box-shadow:  28px 28px 69px #0d1118bc,
   height: 100%;
   -webkit-backface-visibility: hidden;
   backface-visibility: hidden;
+  cursor: alias;
 }
 
 /* Style the front side (fallback if image is missing) */
@@ -128,4 +147,21 @@ box-shadow:  28px 28px 69px #0d1118bc,
 .flip-card-back {
   color: white;
   transform: rotateY(180deg);
+}
+
+@keyframes pulse {
+  0% {
+    transform: scale(0.95);
+    box-shadow: 0 0 0 0 rgba(0, 0, 0, 0.7);
+  }
+
+  70% {
+    transform: scale(1);
+    box-shadow: 0 0 0 10px rgba(0, 0, 0, 0);
+  }
+
+  100% {
+    transform: scale(0.95);
+    box-shadow: 0 0 0 0 rgba(0, 0, 0, 0);
+  }
 }
