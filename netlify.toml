@@ -1,9 +1,8 @@
-from = "/g"
-to = "https://www.google.com/"
-status = 301
-force = true
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200
 
-from = "/gg"
-to = "https://www.google.com/"
-status = 200
-force = true
+  from = "/g"
+  to = "/style.css"
+  status = 200
