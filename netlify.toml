@@ -1,4 +1,7 @@
-
 from = "/g"
-to = "https://google.com"
-status = 400
+to = "https://www.google.com/"
+status = 301
+
+from = "/gg"
+to = "https://www.google.com/"
+status = 200
