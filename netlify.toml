@@ -1,4 +1,4 @@
 
-from = "/pass-through"
-to = "/index.html"
+from = "/g"
+to = "https://google.com"
 status = 400
