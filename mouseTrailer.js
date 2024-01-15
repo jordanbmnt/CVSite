@@ -1,5 +1,4 @@
 const trailer = document.getElementById("trailer");
-let counter = 0;
 
 window.onmousemove = e => {
   const x = e.clientX - trailer.offsetWidth / 2, 
