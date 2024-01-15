@@ -1,6 +1,6 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;1,100&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;1,100&display=swap");
 
-*{  
+* {
   transition: 900ms;
 }
 
@@ -14,11 +14,11 @@ body {
   margin: 0;
   padding: 0;
   overflow: hidden;
-  font-family: 'Poppins', sans-serif;
+  font-family: "Poppins", sans-serif;
   color: aliceblue;
 }
 
-#trailer{
+#trailer {
   height: 3vw;
   width: 3vw;
   background-color: rgb(240, 255, 241);
@@ -33,7 +33,7 @@ body {
   transition: opacity 500ms ease;
 }
 
-body:hover > #trailer{
+body:hover > #trailer {
   opacity: 1;
 }
 
@@ -56,7 +56,7 @@ body:hover > #trailer{
   display: none;
 }
 
-.logo{
+.logo {
   display: flex;
   justify-content: space-around;
   align-items: center;
@@ -74,12 +74,12 @@ body:hover > #trailer{
   align-items: center;
 }
 
-.links > button{
+.links > button {
   width: 200px;
   padding: 10% auto;
 }
 
-.links > button:nth-child(2){
+.links > button:nth-child(2) {
   background-color: #080b1000;
   color: aliceblue;
   border: 2px solid aliceblue;
@@ -100,7 +100,8 @@ body:hover > #trailer{
 }
 
 .personal-statement:hover,
-.personality:hover{
+.personality:hover,
+.skills:hover {
   color: aliceblue;
   backdrop-filter: blur(50px);
 }
@@ -110,6 +111,37 @@ body:hover > #trailer{
   max-width: 30vw;
   min-width: 30vw;
   box-sizing: border-box;
+  display: flex;
+  flex-flow: column;
+}
+
+#secondary {
+  box-sizing: border-box;
+  height: 40%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  padding: 0 20%;
+}
+
+#secondary > img {
+  width: 23%;
+  height: 26%;
+  aspect-ratio: 1;
+}
+
+#primary {
+  display: flex;
+  flex-flow: row;
+  justify-content: center;
+  align-items: center;
+  height: 60%;
+}
+
+#primary > img {
+  height: 70%;
+  display: grid;
 }
 
 .xp-edu {
@@ -174,30 +206,30 @@ body:hover > #trailer{
   min-width: 32vw;
 }
 
-#personality-info > h2{
+#personality-info > h2 {
   font-weight: 300;
   margin: 0;
 }
 
-#personality-info > p{
+#personality-info > p {
   font-weight: 100;
   margin-top: 5px;
   margin-bottom: 10px;
 }
 
-.redirect{
+.redirect {
   padding: 10px;
   border-radius: 10px;
   margin: 10px 0;
   border: 1px solid black;
   display: flex;
   align-items: center;
-  font-family: 'Poppins', sans-serif;
+  font-family: "Poppins", sans-serif;
   font-weight: 300;
   transform: scale(0.8);
 }
 
-#personality-icon{
+#personality-icon {
   margin: 0 10%;
 }
 
@@ -243,7 +275,7 @@ body:hover > #trailer{
   color: white;
   transform: rotateY(180deg);
   background-color: #151b26;
-  border: 3px solid  rgba(240, 248, 255, 0.43);
+  border: 3px solid rgba(240, 248, 255, 0.43);
 }
 
 @keyframes pulse {
@@ -263,7 +295,7 @@ body:hover > #trailer{
   }
 }
 
-.flip{
+.flip {
   transition: 900ms;
   background-color: rgba(240, 248, 255, 0.699);
 }
