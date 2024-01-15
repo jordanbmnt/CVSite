@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;1,100&display=swap');
+
 body {
   display: flex;
   align-items: center;
@@ -8,6 +10,8 @@ body {
   margin: 0;
   padding: 0;
   overflow: hidden;
+  font-family: 'Poppins', sans-serif;
+  color: aliceblue;
 }
 
 .container {
@@ -106,6 +110,32 @@ body {
   min-width: 32vw;
 }
 
+#personality-info > h1{
+  font-weight: 300;
+  margin: 0;
+}
+
+#personality-info > p{
+  font-weight: 100;
+  margin-top: 5px;
+  margin-bottom: 10px;
+}
+
+.redirect{
+  padding: 10px;
+  border-radius: 10px;
+  margin-top: 10px;
+  border: 1px solid black;
+  display: flex;
+  align-items: center;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 300;
+}
+
+#personality-icon{
+  margin: 0 10%;
+}
+
 #personality-icon,
 #personality-info {
   padding: 0 15px;
@@ -126,7 +156,7 @@ body {
   transition: transform 0.8s;
   transform-style: preserve-3d;
 }
-
+/*Po
 /* Position the front and back side */
 .flip-card-front,
 .flip-card-back {
@@ -147,12 +177,13 @@ body {
 .flip-card-back {
   color: white;
   transform: rotateY(180deg);
+  background-color: #151b26;
 }
 
 @keyframes pulse {
   0% {
     transform: scale(0.95);
-    box-shadow: 0 0 0 0 rgba(0, 0, 0, 0.7);
+    box-shadow: 0 0 0 0 rgba(255, 255, 255, 0.189);
   }
 
   70% {
