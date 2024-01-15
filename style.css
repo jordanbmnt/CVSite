@@ -33,34 +33,46 @@ body {
   display: none;
 }
 
+.logo{
+  height: 100px;
+}
+
 .logo-action {
   grid-area: lh;
+  box-sizing: border-box;
 }
 
 .personal-statement {
   grid-area: ps;
+  box-sizing: border-box;
+  padding: 10%;
 }
 
 .personality {
   grid-area: p;
+  box-sizing: border-box;
 }
 
 .skills {
   grid-area: skl;
   max-width: 30vw;
   min-width: 30vw;
+  box-sizing: border-box;
 }
 
 .xp-edu {
   grid-area: xpEdu;
+  box-sizing: border-box;
 }
 
 .achievements {
   grid-area: ach;
+  box-sizing: border-box;
 }
 
 .contacts {
   grid-area: con;
+  box-sizing: border-box;
 }
 
 .card,
@@ -110,7 +122,7 @@ body {
   min-width: 32vw;
 }
 
-#personality-info > h1{
+#personality-info > h2{
   font-weight: 300;
   margin: 0;
 }
