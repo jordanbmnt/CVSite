@@ -57,12 +57,32 @@ body:hover > #trailer{
 }
 
 .logo{
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
   height: 100px;
+  margin-left: 30px;
+  width: 50%;
+  font-size: 30px;
 }
 
 .logo-action {
   grid-area: lh;
   box-sizing: border-box;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.links > button{
+  width: 200px;
+  padding: 10% auto;
+}
+
+.links > button:nth-child(2){
+  background-color: #080b1000;
+  color: aliceblue;
+  border: 2px solid aliceblue;
 }
 
 .personal-statement {
