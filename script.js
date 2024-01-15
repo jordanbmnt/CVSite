@@ -15,7 +15,6 @@ for (const card of cards) {
       const classList = card.children[0].classList;
       if(classList.contains("flip")) card.children[0].classList.remove("flip");
       else card.children[0].classList.add("flip");
-      console.log(classList)
   });
 }
 

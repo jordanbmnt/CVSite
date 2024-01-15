@@ -18,6 +18,25 @@ body {
   color: aliceblue;
 }
 
+#trailer{
+  height: 3vw;
+  width: 3vw;
+  background-color: rgb(240, 255, 241);
+  border-radius: 50%;
+  position: fixed;
+  left: 0;
+  top: 0;
+  z-index: -1;
+  pointer-events: none;
+  opacity: 0;
+  animation: pulse 2s infinite;
+  transition: opacity 500ms ease;
+}
+
+body:hover > #trailer{
+  opacity: 1;
+}
+
 .container {
   width: 95svw;
   height: 93svh;
@@ -49,11 +68,12 @@ body {
 .personal-statement {
   grid-area: ps;
   box-sizing: border-box;
-  padding: 10%;
+  padding: 5%;
   color: rgba(240, 248, 255, 0.26);
 }
 
 .personality {
+  padding: 5%;
   grid-area: p;
   box-sizing: border-box;
   color: rgba(240, 248, 255, 0.26);
@@ -62,6 +82,7 @@ body {
 .personal-statement:hover,
 .personality:hover{
   color: aliceblue;
+  backdrop-filter: blur(50px);
 }
 
 .skills {
