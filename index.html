@@ -4,7 +4,9 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="style/timeline.css" />
+  <link rel="stylesheet" href="style/style.css" />
+  <link rel="stylesheet" href="style/flipCard.css" />
   <link rel="stylesheet"
     href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
   <title>Personal CV</title>
@@ -73,9 +75,53 @@
             src="data:image/png;base64,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" />
         </div>
         <div class="flip-card-back">
-          <h2>John Doe</h2>
-          <p>Architect & Engineer</p>
-          <p>We love that guy</p>
+          <div class="see-more">
+            <button id="education-button" class="redirect">See more</button>
+          </div>
+          <ul>
+            <li style="--accent-color: #41516c">
+              <div class="date">2022-Current</div>
+              <div class="title">Web Dev Intern</div>
+              <div class="descr">
+                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quas
+                itaque hic quibusdam
+              </div>
+            </li>
+            <li style="--accent-color: #fbca3e">
+              <div class="date">2007</div>
+              <div class="title">Title 2</div>
+              <div class="descr">
+                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quos
+                adipisci nobis nostrum vero nihil veniam.
+              </div>
+            </li>
+            <li style="--accent-color: #e24a68">
+              <div class="date">2012</div>
+              <div class="title">Title 3</div>
+              <div class="descr">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga
+                minima consequuntur soluta placeat iure totam commodi
+                repellendus ea delectus, libero fugit quod reprehenderit,
+                sequi quo, et dolorum saepe nulla hic.
+              </div>
+            </li>
+            <li style="--accent-color: #1b5f8c">
+              <div class="date">2017</div>
+              <div class="title">Title 4</div>
+              <div class="descr">
+                Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+                Impedit, cumque.
+              </div>
+            </li>
+            <li style="--accent-color: #4cadad">
+              <div class="date">2022</div>
+              <div class="title">Title 5</div>
+              <div class="descr">
+                Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+                Odit, non.
+              </div>
+            </li>
+          </ul>
         </div>
       </div>
     </div>
