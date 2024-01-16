@@ -85,6 +85,17 @@ body:hover > #trailer {
   border: 2px solid aliceblue;
 }
 
+.links > button:nth-child(1):hover{
+  background-color: #080b1000;
+  color: aliceblue;
+}
+
+.links > button:nth-child(2):hover{
+  background-color: aliceblue;
+  color: #000000;
+  border: 2px solid #000000;
+}
+
 .personal-statement {
   grid-area: ps;
   box-sizing: border-box;
