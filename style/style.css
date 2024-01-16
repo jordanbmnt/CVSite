@@ -4,10 +4,20 @@
   transition: 900ms;
 }
 
-body {
+body,
+.logo,
+.logo-action,
+#secondary,
+#primary,
+.flip-card-front:has(.icon),
+.personality,
+.redirect {
   display: flex;
-  align-items: center;
   justify-content: center;
+  align-items: center;
+}
+
+body {
   background-color: #080b10;
   height: 100vh;
   width: 100vw;
@@ -38,18 +48,22 @@ body:hover > #trailer {
 }
 
 .container {
-  width: 95svw;
-  height: 93svh;
+  overflow: hidden;
+  scale: 0.9;
+  width: 100vw;
+  height: 100vh;
   display: grid;
   grid-template-areas:
-    "lh  lh  lh  lh  lh  xpEdu xpEdu"
-    "ps ps  skl skl skl xpEdu xpEdu"
-    "ps ps  skl skl skl xpEdu xpEdu"
-    "ps ps  skl skl skl ach    ach"
-    "ps ps  skl skl skl ach    ach"
-    "p  p   skl skl skl con    con"
-    "p  p   skl skl skl con    con";
+    "lh lh lh lh  lh  lh  xpEdu xpEdu"
+    "ps ps ps skl skl skl xpEdu xpEdu"
+    "ps ps ps skl skl skl xpEdu xpEdu"
+    "ps ps ps skl skl skl ach   ach"
+    "ps ps ps skl skl skl ach   ach"
+    "p  p  p  skl skl skl con   con"
+    "p  p  p  skl skl skl con   con";
   grid-gap: 12px;
+  grid-template-columns: repeat(8, 1fr);
+  grid-template-rows: repeat(7, 1fr);
 }
 
 .inactive {
@@ -57,9 +71,7 @@ body:hover > #trailer {
 }
 
 .logo {
-  display: flex;
   justify-content: space-around;
-  align-items: center;
   height: 100px;
   margin-left: 30px;
   width: 50%;
@@ -69,9 +81,7 @@ body:hover > #trailer {
 .logo-action {
   grid-area: lh;
   box-sizing: border-box;
-  display: flex;
   justify-content: space-between;
-  align-items: center;
 }
 
 .links > button {
@@ -85,12 +95,12 @@ body:hover > #trailer {
   border: 2px solid aliceblue;
 }
 
-.links > button:nth-child(1):hover{
+.links > button:nth-child(1):hover {
   background-color: #080b1000;
   color: aliceblue;
 }
 
-.links > button:nth-child(2):hover{
+.links > button:nth-child(2):hover {
   background-color: aliceblue;
   color: #000000;
   border: 2px solid #000000;
@@ -119,8 +129,6 @@ body:hover > #trailer {
 
 .skills {
   grid-area: skl;
-  max-width: 30vw;
-  min-width: 30vw;
   box-sizing: border-box;
   display: flex;
   flex-flow: column;
@@ -129,29 +137,22 @@ body:hover > #trailer {
 #secondary {
   box-sizing: border-box;
   height: 40%;
-  display: flex;
   flex-wrap: wrap;
-  justify-content: center;
-  align-items: center;
   padding: 0 20%;
 }
 
 #secondary > img {
   width: 23%;
-  height: 26%;
   aspect-ratio: 1;
 }
 
 #primary {
-  display: flex;
   flex-flow: row;
-  justify-content: center;
-  align-items: center;
   height: 60%;
 }
 
 #primary > img {
-  height: 70%;
+  width: 40%;
   display: grid;
 }
 
@@ -168,6 +169,7 @@ body:hover > #trailer {
 .contacts {
   grid-area: con;
   box-sizing: border-box;
+  height: 98%;
 }
 
 .card,
@@ -181,7 +183,7 @@ body:hover > #trailer {
 .⏹️,
 .flip-card-front,
 .flip-card-back,
-.card /*Ignore this*/ {
+.card {
   background: rgba(67, 82, 123, 0.25);
   box-shadow: 3px 4px 5px 0 rgba(31, 38, 135, 0.147);
   backdrop-filter: blur(14px);
@@ -191,9 +193,7 @@ body:hover > #trailer {
 
 .flip-card-front:has(.icon),
 .personality {
-  display: flex;
   justify-content: space-around;
-  align-items: center;
   flex-flow: row;
 }
 
@@ -202,19 +202,6 @@ body:hover > #trailer {
   border-radius: 79px;
   box-shadow: 28px 28px 69px #0d1118bc, -28px -28px 69px #1d253473;
   animation: pulse 2s infinite;
-}
-
-.personality,
-.personal-statement {
-  max-width: 32vw;
-  min-width: 32vw;
-}
-
-.xp-edu,
-.achievements,
-.contacts {
-  max-width: 32vw;
-  min-width: 32vw;
 }
 
 #personality-info > h2 {
@@ -229,12 +216,11 @@ body:hover > #trailer {
 }
 
 .redirect {
+  justify-content: flex-start;
   padding: 10px;
   border-radius: 10px;
   margin: 10px 0;
   border: 1px solid black;
-  display: flex;
-  align-items: center;
   font-family: "Poppins", sans-serif;
   font-weight: 300;
   font-size: medium;
