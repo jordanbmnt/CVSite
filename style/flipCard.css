@@ -22,7 +22,6 @@
   height: 100%;
   -webkit-backface-visibility: hidden;
   backface-visibility: hidden;
-  cursor: alias;
   z-index: 1;
 }
 
