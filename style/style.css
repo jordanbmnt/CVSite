@@ -1,0 +1,259 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;1,100&display=swap");
+
+* {
+  transition: 900ms;
+}
+
+body,
+.logo,
+.logo-action,
+#secondary,
+#primary,
+.flip-card-front:has(.icon),
+.personality,
+.redirect {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+body {
+  background-color: #080b10;
+  height: 100vh;
+  width: 100vw;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  font-family: "Poppins", sans-serif;
+  color: aliceblue;
+}
+
+#trailer {
+  height: 3vw;
+  width: 3vw;
+  background-color: rgb(240, 255, 241);
+  border-radius: 50%;
+  position: fixed;
+  left: 0;
+  top: 0;
+  z-index: -1;
+  pointer-events: none;
+  opacity: 0;
+  animation: pulse 2s infinite;
+  transition: opacity 500ms ease;
+}
+
+body:hover > #trailer {
+  opacity: 1;
+}
+
+.container {
+  overflow: hidden;
+  scale: 0.9;
+  width: 100vw;
+  height: 100vh;
+  display: grid;
+  grid-template-areas:
+    "lh lh lh lh  lh  lh  xpEdu xpEdu"
+    "ps ps ps skl skl skl xpEdu xpEdu"
+    "ps ps ps skl skl skl xpEdu xpEdu"
+    "ps ps ps skl skl skl ach   ach"
+    "ps ps ps skl skl skl ach   ach"
+    "p  p  p  skl skl skl con   con"
+    "p  p  p  skl skl skl con   con";
+  grid-gap: 12px;
+  grid-template-columns: repeat(8, 1fr);
+  grid-template-rows: repeat(7, 1fr);
+}
+
+.inactive {
+  display: none;
+}
+
+.logo {
+  justify-content: space-around;
+  height: 100px;
+  margin-left: 30px;
+  width: 50%;
+  font-size: 30px;
+}
+
+.logo-action {
+  grid-area: lh;
+  box-sizing: border-box;
+  justify-content: space-between;
+}
+
+.links > button {
+  width: 200px;
+  padding: 10% auto;
+}
+
+.links > button:nth-child(2) {
+  background-color: #080b1000;
+  color: aliceblue;
+  border: 2px solid aliceblue;
+}
+
+.links > button:nth-child(1):hover {
+  background-color: #080b1000;
+  color: aliceblue;
+}
+
+.links > button:nth-child(2):hover {
+  background-color: aliceblue;
+  color: #000000;
+  border: 2px solid #000000;
+}
+
+.personal-statement {
+  grid-area: ps;
+  box-sizing: border-box;
+  padding: 5%;
+  color: rgba(240, 248, 255, 0.26);
+}
+
+.personality {
+  padding: 5%;
+  grid-area: p;
+  box-sizing: border-box;
+  color: rgba(240, 248, 255, 0.26);
+}
+
+.personal-statement:hover,
+.personality:hover,
+.skills:hover {
+  color: aliceblue;
+  backdrop-filter: blur(50px);
+}
+
+.skills {
+  grid-area: skl;
+  box-sizing: border-box;
+  display: flex;
+  flex-flow: column;
+}
+
+#secondary {
+  box-sizing: border-box;
+  height: 40%;
+  flex-wrap: wrap;
+  padding: 0 20%;
+}
+
+#secondary > img {
+  width: 23%;
+  aspect-ratio: 1;
+}
+
+#primary {
+  flex-flow: row;
+  height: 60%;
+}
+
+#primary > img {
+  width: 40%;
+  display: grid;
+}
+
+.xp-edu {
+  grid-area: xpEdu;
+  box-sizing: border-box;
+}
+
+.achievements {
+  grid-area: ach;
+  box-sizing: border-box;
+}
+
+.contacts {
+  grid-area: con;
+  box-sizing: border-box;
+  height: 98%;
+}
+
+.card,
+.flip-card-inner,
+.flip-card-back,
+.flip-card-front,
+.⏹️ {
+  border-radius: 10px;
+}
+
+.⏹️,
+.flip-card-front,
+.flip-card-back,
+.card {
+  background: rgba(67, 82, 123, 0.25);
+  box-shadow: 3px 4px 5px 0 rgba(31, 38, 135, 0.147);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  border-radius: 10px;
+}
+
+.flip-card-front:has(.icon),
+.personality {
+  justify-content: space-around;
+  flex-flow: row;
+}
+
+.icon {
+  padding: 10px;
+  border-radius: 79px;
+  box-shadow: 28px 28px 69px #0d1118bc, -28px -28px 69px #1d253473;
+  animation: pulse 2s infinite;
+}
+
+#personality-info > h2 {
+  font-weight: 300;
+  margin: 0;
+}
+
+#personality-info > p {
+  font-weight: 100;
+  margin-top: 5px;
+  margin-bottom: 10px;
+}
+
+.redirect {
+  justify-content: flex-start;
+  padding: 10px;
+  border-radius: 10px;
+  margin: 10px 0;
+  border: 1px solid black;
+  font-family: "Poppins", sans-serif;
+  font-weight: 300;
+  font-size: medium;
+  transform: scale(0.8);
+}
+
+#personality-icon {
+  margin: 0 10%;
+}
+
+#personality-icon,
+#personality-info {
+  padding: 0 15px;
+}
+
+@keyframes pulse {
+  0% {
+    transform: scale(0.95);
+    box-shadow: 0 0 0 0 rgba(255, 255, 255, 0.189);
+  }
+
+  70% {
+    transform: scale(1);
+    box-shadow: 0 0 0 10px rgba(0, 0, 0, 0);
+  }
+
+  100% {
+    transform: scale(0.95);
+    box-shadow: 0 0 0 0 rgba(0, 0, 0, 0);
+  }
+}
+
+.flip {
+  transition: 900ms;
+  background-color: rgba(240, 248, 255, 0.699);
+}
