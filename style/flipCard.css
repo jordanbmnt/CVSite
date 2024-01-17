@@ -32,6 +32,10 @@
 
 /* Style the back side */
 .flip-card-back {
+  padding: 0;
+  display: flex;
+  box-sizing: border-box;
+  justify-content: center;
   color: white;
   transform: rotateY(180deg);
   background-color: #151b26;
