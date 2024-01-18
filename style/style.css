@@ -204,13 +204,21 @@ body:hover > #trailer {
   animation: pulse 2s infinite;
 }
 
+h2 {
+  font-size: clamp(1rem, 1.7vw, 2rem);
+}
+
+.personal-statement > p {
+  font-size: 1.2cqw;
+}
+
 #personality-info > h2 {
   font-weight: 300;
   margin: 0;
 }
 
 #personality-info > p {
-  font-weight: 100;
+  font-size: 0.8vw;
   margin-top: 5px;
   margin-bottom: 10px;
 }
@@ -256,4 +264,104 @@ body:hover > #trailer {
 .flip {
   scale: 0.9;
   background-color: rgba(240, 248, 255, 0.699);
+}
+
+@media screen and (max-width: 1200px) {
+  .container {
+    grid-template-areas:
+      "lh lh lh lh  lh  xpEdu  xpEdu xpEdu"
+      "ps ps skl skl skl xpEdu xpEdu xpEdu"
+      "ps ps skl skl skl xpEdu xpEdu xpEdu"
+      "ps ps skl skl skl ach ach   ach"
+      "ps ps skl skl skl ach ach   ach"
+      "p  p  p  p con con con   con"
+      "p  p  p  p con con con   con";
+    grid-template-columns: repeat(8, 1fr);
+    grid-template-rows: repeat(7, 1fr);
+  }
+  .personal-statement > p {
+    font-size: 1.2cqw;
+  }
+}
+
+@media screen and (max-width: 1050) {
+  .container {
+    grid-template-areas:
+      "lh lh lh lh  lh  xpEdu  xpEdu xpEdu"
+      "ps ps ps skl skl xpEdu xpEdu xpEdu"
+      "ps ps ps skl skl xpEdu xpEdu xpEdu"
+      "ps ps ps skl skl ach ach   ach"
+      "ps ps ps skl skl ach ach   ach"
+      "con  con  con  con con ach ach   ach"
+      "con  con  con  con con ach ach   ach";
+    grid-template-columns: repeat(8, 1fr);
+    grid-template-rows: repeat(7, 1fr);
+  }
+  .personality {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .skills {
+    padding: 50px;
+  }
+
+  .container {
+    overflow-y: scroll;
+    grid-template-areas:
+      "lh lh lh lh lh lh"
+      "ps ps ps ps ps ps"
+      "ps ps ps ps ps ps"
+      "skl skl skl skl skl skl"
+      "skl skl skl skl skl skl"
+      "skl skl skl skl skl skl"
+      "p p p p p p"
+      "p p p p p p"
+      "ach ach ach ach ach ach"
+      "ach ach ach ach ach ach"
+      "xpEdu xpEdu xpEdu xpEdu xpEdu xpEdu"
+      "xpEdu xpEdu xpEdu xpEdu xpEdu xpEdu"
+      "con con con con con con"
+      "con con con con con con";
+    grid-template-columns: repeat(6, 1fr);
+    grid-template-rows: repeat(14, max-content);
+  }
+
+  .personal-statement {
+    padding: 50px;
+    height: 35vh;
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+  }
+
+  .personal-statement > p {
+    margin-top: 0;
+    font-size: 1.9cqh;
+  }
+
+  .personality {
+    display: flex;
+    height: 34vh;
+  }
+
+  #personality-info > h2,
+  h2 {
+    font-size: 3.2cqh;
+  }
+
+  #personality-info > p {
+    font-size: 1.9cqh;
+    font-weight: 100;
+  }
+
+  #primary > img {
+    width: 40%;
+    display: grid;
+  }
+
+  .card {
+    height: 25vh;
+  }
 }
