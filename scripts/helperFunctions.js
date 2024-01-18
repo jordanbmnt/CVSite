@@ -1,11 +1,8 @@
-const cards = document.getElementsByClassName("card");
 const achievements = document.getElementsByClassName("achievements");
 const contacts = document.getElementsByClassName("contacts");
-const educationButton = document.getElementById("education-button");
 const timeLine = document.getElementById("time-line");
 const seeMore = document.getElementsByClassName("see-more")[0];
 const container = document.getElementsByClassName("container")[0];
-let eduOpen = false;
 
 const openEducationSection = (e) => {
   seeMore.style.justifyContent = "flex-end";
@@ -48,32 +45,6 @@ const closeEducationSection = (e) => {
   educationButton.textContent = "See more";
 };
 
-educationButton.addEventListener("click", (e) => {
-  if (educationButton.textContent === "See more") {
-    openEducationSection(e);
-  } else {
-    closeEducationSection(e);
-  }
-});
-
-function redirect() {
+const redirect = () => {
   window.open("https://www.16personalities.com/infj-personality", "_blank");
-}
-
-document.getElementById("personality-link").addEventListener("click", redirect);
-
-for (const card of cards) {
-  card.addEventListener("click", (e) => {
-    if (!e.target.className.includes("redirect") && !eduOpen) {
-      const cardTransformation = card.children[0].style.transform;
-      const classList = card.children[0].classList;
-
-      card.children[0].style.transform = cardTransformation
-        ? ""
-        : "rotateY(180deg)";
-
-      if (classList.contains("flip")) card.children[0].classList.remove("flip");
-      else card.children[0].classList.add("flip");
-    }
-  });
 }
