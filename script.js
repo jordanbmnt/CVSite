@@ -7,7 +7,7 @@ const seeMore = document.getElementsByClassName("see-more")[0];
 const container = document.getElementsByClassName("container")[0];
 let eduOpen = false;
 
-const openEducation = (e) => {
+const openEducationSection = (e) => {
   seeMore.style.justifyContent = "flex-end";
   educationButton.style.marginRight = "16px";
   seeMore.style.zIndex = "1";
@@ -27,7 +27,7 @@ const openEducation = (e) => {
   }, 900);
 };
 
-const closeEducation = (e) => {
+const closeEducationSection = (e) => {
   educationButton.style.marginRight = "0";
   seeMore.style.justifyContent = "center";
   seeMore.style.position = "absolute";
@@ -50,9 +50,9 @@ const closeEducation = (e) => {
 
 educationButton.addEventListener("click", (e) => {
   if (educationButton.textContent === "See more") {
-    openEducation(e);
+    openEducationSection(e);
   } else {
-    closeEducation(e);
+    closeEducationSection(e);
   }
 });
 
@@ -66,10 +66,12 @@ for (const card of cards) {
   card.addEventListener("click", (e) => {
     if (!e.target.className.includes("redirect") && !eduOpen) {
       const cardTransformation = card.children[0].style.transform;
+      const classList = card.children[0].classList;
+
       card.children[0].style.transform = cardTransformation
         ? ""
         : "rotateY(180deg)";
-      const classList = card.children[0].classList;
+
       if (classList.contains("flip")) card.children[0].classList.remove("flip");
       else card.children[0].classList.add("flip");
     }
