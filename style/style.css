@@ -243,6 +243,15 @@ h2 {
   width: max-content;
 }
 
+  #education-button{
+    padding: 9px;
+    animation: pulse 2s infinite;
+    color: aliceblue;
+    border: 2px solid aliceblue;
+    background-color: transparent;
+    font-size: 15px;
+  }
+
 #personality-icon {
   margin: 0 10%;
 }

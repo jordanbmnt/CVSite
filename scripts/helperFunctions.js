@@ -6,7 +6,7 @@ const container = document.getElementsByClassName("container")[0];
 
 const openEducationSection = (e) => {
   const windowWidth = window.innerWidth;
-  
+
   seeMore.style.justifyContent = "flex-end";
   educationButton.style.marginRight = "16px";
   seeMore.style.zIndex = "1";
@@ -15,7 +15,8 @@ const openEducationSection = (e) => {
   eduOpen = true;
   e.target.parentNode.parentNode.style.height = "93vh";
   e.target.parentNode.parentNode.style.zIndex = 1000;
-  e.target.parentNode.parentNode.style.width = windowWidth <= 786 ? "100vw" : windowWidth <= 1200 ? "80vw" : "35vw";
+  e.target.parentNode.parentNode.style.width =
+    windowWidth <= 786 ? "100vw" : windowWidth <= 1200 ? "80vw" : "50vw";
   e.target.parentNode.parentNode.style.padding = "50px";
   e.target.parentNode.parentNode.style.overflowY = "scroll";
   achievements[0].style.opacity = 0;
@@ -50,4 +51,4 @@ const closeEducationSection = (e) => {
 
 const redirect = () => {
   window.open("https://www.16personalities.com/infj-personality", "_blank");
-}
+};
