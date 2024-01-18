@@ -71,7 +71,7 @@ body:hover > #trailer {
   height: 100px;
   margin-left: 30px;
   width: 50%;
-  font-size: 30px;
+  font-size: 2cqw;
 }
 
 .logo-action {
@@ -81,6 +81,8 @@ body:hover > #trailer {
 }
 
 .links > button {
+  display: flex;
+  justify-content: space-around;
   width: 200px;
   padding: 10% auto;
 }
@@ -133,7 +135,7 @@ body:hover > #trailer {
 
 #secondary {
   box-sizing: border-box;
-  height: 40%;
+  height: 50%;
   flex-wrap: wrap;
   padding: 0 20%;
 }
@@ -149,7 +151,7 @@ body:hover > #trailer {
 }
 
 #primary > img {
-  width: 40%;
+  width: 50%;
   display: grid;
 }
 
@@ -206,7 +208,14 @@ h2 {
 }
 
 .personal-statement > p {
-    font-size: 2cqh;
+  font-size: 2cqh;
+}
+
+#personality-info {
+  display: flex;
+  flex-flow: column;
+  align-items: flex-start;
+  justify-content: center;
 }
 
 #personality-info > h2 {
@@ -215,7 +224,7 @@ h2 {
 }
 
 #personality-info > p {
-    font-size: 1.1cqw;
+  font-size: 1.1cqw;
   margin-top: 5px;
   margin-bottom: 10px;
 }
@@ -228,8 +237,10 @@ h2 {
   border: 1px solid black;
   font-family: "Poppins", sans-serif;
   font-weight: 300;
-  font-size: medium;
-  transform: scale(0.8);
+  margin-right: 10px;
+  font-size: 1.3cqh;
+  height: 40px;
+  width: max-content;
 }
 
 #personality-icon {
@@ -264,6 +275,9 @@ h2 {
 }
 
 @media screen and (max-width: 1200px) {
+  .logo {
+    font-size: 2cqh;
+  }
   .container {
     grid-template-areas:
       "lh lh lh lh  lh  xpEdu  xpEdu xpEdu"
@@ -285,8 +299,18 @@ h2 {
 }
 
 @media screen and (max-width: 768px) {
-  .skills {
-    padding: 50px;
+  #personality-icon {
+    margin: 10px;
+    padding: 0;
+  }
+
+  .personality > img {
+    width: 50%;
+  }
+
+  .skills,
+  .personal-statement {
+    padding: 25px;
   }
 
   .container {
@@ -300,36 +324,55 @@ h2 {
       "skl skl skl skl skl skl"
       "p p p p p p"
       "p p p p p p"
-      "ach ach ach ach ach ach"
-      "ach ach ach ach ach ach"
       "xpEdu xpEdu xpEdu xpEdu xpEdu xpEdu"
       "xpEdu xpEdu xpEdu xpEdu xpEdu xpEdu"
+      "ach ach ach ach ach ach"
+      "ach ach ach ach ach ach"
       "con con con con con con"
       "con con con con con con";
     grid-template-columns: repeat(6, 1fr);
     grid-template-rows: repeat(14, max-content);
+    grid-gap: 22px;
   }
 
   .personal-statement {
-    padding: 50px;
-    height: 35vh;
+    height: max-content;
     display: flex;
     flex-flow: column;
     justify-content: center;
   }
 
+  h2 {
+    color: rgba(240, 248, 255, 0.726);
+  }
+
+  p {
+    color: rgba(234, 245, 254, 0.616);
+  }
+
+  .personal-statement > h2 {
+    margin-bottom: 10px;
+  }
+
+  .personal-statement > p {
+    margin-top: 5px;
+    font-size: 1.7cqh;
+  }
+
   .personality {
     display: flex;
-    height: 34vh;
+    height: max-content;
   }
 
   #personality-info > h2,
   h2 {
-    font-size: 3.2cqh;
+    font-size: 3.1cqh;
   }
 
   #personality-info > p {
-    font-size: 1.6cqh;
+    margin-top: 3px;
+    margin-bottom: 10px;
+    font-size: 1.7cqh;
     font-weight: 100;
   }
 
@@ -340,5 +383,11 @@ h2 {
 
   .card {
     height: 25vh;
+  }
+
+  .redirect {
+    height: fit-content;
+    padding: 5px;
+    width: max-content;
   }
 }
