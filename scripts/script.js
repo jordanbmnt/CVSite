@@ -11,7 +11,12 @@ educationButton.addEventListener("click", (e) => {
   }
 });
 
-document.getElementById("personality-link").addEventListener("click", redirect);
+document
+  .getElementById("personality-link")
+  .addEventListener("click", personalityRedirect);
+document
+  .getElementById("github-link")
+  .addEventListener("click", githubRedirect);
 
 for (const card of cards) {
   card.addEventListener("click", (e) => {

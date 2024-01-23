@@ -49,6 +49,10 @@ const closeEducationSection = (e) => {
   educationButton.textContent = "See more";
 };
 
-const redirect = () => {
+const personalityRedirect = () => {
   window.open("https://www.16personalities.com/infj-personality", "_blank");
+};
+
+const githubRedirect = () => {
+  window.open("https://github.com/jordanbmnt", "_blank");
 };
