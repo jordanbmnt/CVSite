@@ -147,7 +147,15 @@
       </div>
     </div>
   </div>
-
+  <script>
+    (async () => {
+      let results = await fetch("/.netlify/functions/dbConnection").then(response => {
+        console.log(response)
+        response.json();
+      });
+      console.log(results)
+    })();
+  </script>
   <script src="/scripts/helperFunctions.js"></script>
   <script src="/scripts/script.js"></script>
   <script src="/scripts/mouseTrailer.js"></script>
