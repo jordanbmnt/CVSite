@@ -150,9 +150,9 @@
   <script>
     (async () => {
       let results = await fetch("/.netlify/functions/dbConnection").then(response => {
-        console.log(response)
         response.json();
       });
+      results.forEach(r => console.log(r))
       console.log(results)
     })();
   </script>
