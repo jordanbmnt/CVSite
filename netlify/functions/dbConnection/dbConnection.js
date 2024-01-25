@@ -6,30 +6,18 @@ const clientPromise = mongoClient.connect();
 
 const handler = async (event) => {
   try {
+    const params = event.queryStringParameters;
     const database = (await clientPromise).db(process.env.MONGODB_DATABASE);
-    console.log(database.collections);
     const collection = database.collection(process.env.MONGODB_COLLECTION);
 
-    //Add a contact
-
-    const newItem = {
-      fname: "Plastic Bricks",
-      lname: "j",
-      subject: "nknasjnc",
-    };
-    collection.insertOne(newItem);
-
-    // find a contact
-
-    const results = await collection.find({}).limit(10).toArray();
-    console.log(results);
+    collection.insertOne(params);
 
     return {
       statusCode: 200,
-      body: results.toString(),
+      body: "results.toString()",
     };
   } catch (error) {
-    return { statusCode: 500, body: error.toString() };
+    return { statusCode: 500, body: error.message };
   }
 };
 
