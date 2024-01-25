@@ -1,13 +1,12 @@
-const cards = document.getElementsByClassName("card");
 const achievements = document.getElementsByClassName("achievements");
 const contacts = document.getElementsByClassName("contacts");
-const educationButton = document.getElementById("education-button");
 const timeLine = document.getElementById("time-line");
 const seeMore = document.getElementsByClassName("see-more")[0];
 const container = document.getElementsByClassName("container")[0];
-let eduOpen = false;
 
-const openEducation = (e) => {
+const openEducationSection = (e) => {
+  const windowWidth = window.innerWidth;
+
   seeMore.style.justifyContent = "flex-end";
   educationButton.style.marginRight = "16px";
   seeMore.style.zIndex = "1";
@@ -15,7 +14,9 @@ const openEducation = (e) => {
   timeLine.style.scale = 1;
   eduOpen = true;
   e.target.parentNode.parentNode.style.height = "93vh";
-  e.target.parentNode.parentNode.style.width = "35vw";
+  e.target.parentNode.parentNode.style.zIndex = 1000;
+  e.target.parentNode.parentNode.style.width =
+    windowWidth <= 786 ? "100vw" : windowWidth <= 1200 ? "80vw" : "50vw";
   e.target.parentNode.parentNode.style.padding = "50px";
   e.target.parentNode.parentNode.style.overflowY = "scroll";
   achievements[0].style.opacity = 0;
@@ -27,7 +28,7 @@ const openEducation = (e) => {
   }, 900);
 };
 
-const closeEducation = (e) => {
+const closeEducationSection = (e) => {
   educationButton.style.marginRight = "0";
   seeMore.style.justifyContent = "center";
   seeMore.style.position = "absolute";
@@ -48,30 +49,10 @@ const closeEducation = (e) => {
   educationButton.textContent = "See more";
 };
 
-educationButton.addEventListener("click", (e) => {
-  if (educationButton.textContent === "See more") {
-    openEducation(e);
-  } else {
-    closeEducation(e);
-  }
-});
-
-function redirect() {
+const personalityRedirect = () => {
   window.open("https://www.16personalities.com/infj-personality", "_blank");
-}
+};
 
-document.getElementById("personality-link").addEventListener("click", redirect);
-
-for (const card of cards) {
-  card.addEventListener("click", (e) => {
-    if (!e.target.className.includes("redirect") && !eduOpen) {
-      const cardTransformation = card.children[0].style.transform;
-      card.children[0].style.transform = cardTransformation
-        ? ""
-        : "rotateY(180deg)";
-      const classList = card.children[0].classList;
-      if (classList.contains("flip")) card.children[0].classList.remove("flip");
-      else card.children[0].classList.add("flip");
-    }
-  });
-}
+const githubRedirect = () => {
+  window.open("https://github.com/jordanbmnt", "_blank");
+};

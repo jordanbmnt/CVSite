@@ -1,0 +1,43 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;1,100&display=swap");
+
+* {
+  font-family: "Poppins", sans-serif;
+}
+
+input[type=text],
+select,
+textarea {
+  background: rgba(67, 82, 123, 0.25);
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  margin-top: 6px;
+  margin-bottom: 16px;
+  resize: vertical;
+  color: white;
+}
+
+input[type=submit] {
+  background: rgba(73, 93, 147, 0.955);
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+input[type=submit]:hover {
+  background: rgba(67, 82, 123, 0.955);
+}
+
+.contact {
+  width: 60vw;
+  background: rgba(67, 82, 123, 0.25);
+  box-shadow: -3px 4px 5px 0 rgba(31, 38, 135, 0.147);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  border-radius: 10px;
+  padding: 20px;
+}

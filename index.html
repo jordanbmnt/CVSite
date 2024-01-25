@@ -15,22 +15,29 @@
 <body>
   <div id="trailer"></div>
   <div class="container">
-    <div class="blur inactive"></div>
     <div class="⏹️ logo-action">
       <div class="logo">Jordan .M Beaumont</div>
       <div class="links">
-        <button class="redirect">My GitHub</button>
-        <button class="redirect">Credit To</button>
+        <button id="github-link" class="redirect">
+          My GitHub
+          <span class="material-symbols-outlined"> data_object </span>
+        </button>
+        <button class="redirect">
+          Credit To
+          <span class="material-symbols-outlined"> emoji_people </span>
+        </button>
       </div>
     </div>
     <div class="⏹️ personal-statement">
       <h2>Personal Statement</h2>
-      Web Developer with experience in wireframing, creating and maintaining
-      dynamic, static, and mobile websites using WordPress, HTML, CSS, and
-      JavaScript. Skilled in responsive design and debugging. Passionate about
-      learning new technologies and improving my web development skills.
-      Currently working remotely as a web developer enrolled in a web
-      development learnership program.
+      <p>
+        Web Developer with experience in wireframing, creating and maintaining
+        dynamic, static, and mobile websites using WordPress, HTML, CSS, and
+        JavaScript. Skilled in responsive design and debugging. Passionate
+        about learning new technologies and improving my web development
+        skills. Currently working remotely as a web developer enrolled in a
+        web development learnership program.
+      </p>
     </div>
     <div class="⏹️ personality">
       <img id="personality-icon" src="https://img.icons8.com/nolan/96/adaptable--v1.png" alt="Personality Scetion" />
@@ -140,9 +147,18 @@
       </div>
     </div>
   </div>
-
-  <script src="script.js"></script>
-  <script src="mouseTrailer.js"></script>
+  <script>
+    (async () => {
+      let results = await fetch("/.netlify/functions/dbConnection").then(response => {
+        response.json();
+      });
+      results.forEach(r => console.log(r))
+      console.log(results)
+    })();
+  </script>
+  <script src="/scripts/helperFunctions.js"></script>
+  <script src="/scripts/script.js"></script>
+  <script src="/scripts/mouseTrailer.js"></script>
 </body>
 
 </html>
