@@ -12,22 +12,26 @@
 <body>
   <div id="trailer"></div>
   <div class="contact">
-    <form data-netlify="true">
+    <form name="contact" method="POST" data-netlify="true">
 
       <label for="fname">First Name</label>
-      <input type="text" id="fname" name="firstname" placeholder="Your name..">
+      <input type="text" id="fname" name="fname" placeholder="Your name.." required>
 
       <label for="lname">Last Name</label>
-      <input type="text" id="lname" name="lastname" placeholder="Your last name..">
+      <input type="text" id="lname" name="lname" placeholder="Your last name.." required>
 
       <label for="subject">Subject</label>
-      <textarea id="subject" name="subject" placeholder="Write something.." style="height:200px"></textarea>
+      <textarea id="subject" name="subject" placeholder="Write something.." style="height:200px" required></textarea>
 
       <input type="submit" value="Submit">
 
     </form>
   </div>
 </body>
+<script src="/scripts/handleSubmit.js"></script>
 <script src="/scripts/mouseTrailer.js"></script>
+<!-- <script>
+  ()();
+</script> -->
 
 </html>
