@@ -1,5 +1,4 @@
 const cards = document.getElementsByClassName("card");
-
 const educationButton = document.getElementById("education-button");
 let eduOpen = false;
 
@@ -14,6 +13,9 @@ educationButton.addEventListener("click", (e) => {
 document
   .getElementById("personality-link")
   .addEventListener("click", personalityRedirect);
+document
+  .getElementById("contact-me")
+  .addEventListener("click", contactFormRedirect);
 document
   .getElementById("github-link")
   .addEventListener("click", githubRedirect);

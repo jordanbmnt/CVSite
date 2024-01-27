@@ -1,5 +1,24 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;1,100&display=swap");
 
+.tooltip .tooltiptext {
+  visibility: hidden;
+  width: 120px;
+  background-color: black;
+  color: #fff;
+  text-align: center;
+  padding: 5px 0;
+  border-radius: 6px;
+
+  /* Position the tooltip text - see examples below! */
+  position: absolute;
+  z-index: 1;
+}
+
+/* Show the tooltip text when you mouse over the tooltip container */
+.tooltip:hover .tooltiptext {
+  visibility: visible;
+}
+
 * {
   transition: 900ms;
 }
@@ -85,6 +104,7 @@ body:hover>#trailer {
   justify-content: space-around;
   width: 200px;
   padding: 10% auto;
+  font-family: "Poppins", sans-serif;
 }
 
 .links>button:nth-child(2) {
@@ -168,7 +188,40 @@ body:hover>#trailer {
 .contacts {
   grid-area: con;
   box-sizing: border-box;
-  height: 98%;
+}
+
+.contacts .flip-card-front {
+  scale: 0.98;
+  border-radius: 17px;
+  background-color: hsla(224, 29%, 10%, 0.623);
+  border: 1px solid white;
+  letter-spacing: 1.3px;
+}
+
+#contact-info {
+  display: flex;
+  flex-flow: row;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+#contact-info button,
+.contact-div a {
+  display: flex;
+  justify-content: space-around;
+  width: 150px;
+  padding: 10% auto;
+  font-family: "Poppins", sans-serif;
+}
+
+.contact-div {
+  display: flex;
+  flex-flow: column;
+}
+
+.contact-div a {
+  text-decoration: none;
+  color: rgba(234, 245, 254, 0.834);
 }
 
 .card,
@@ -208,7 +261,7 @@ h2 {
 }
 
 .personal-statement>p {
-  font-size: 2cqh;
+  font-size: 2.2cqh;
 }
 
 #personality-info {
@@ -301,22 +354,31 @@ h2 {
     grid-template-rows: repeat(7, 1fr);
   }
 
+  .contacts .flip-card-front {
+    font-size: 2cqw;
+  }
+
+  #personality-info {
+    box-sizing: border-box;
+  }
+
   #personality-info>p {
-    font-size: 1.4cqw;
+    font-size: 1.3cqw;
   }
 
   .personal-statement>p {
-    font-size: 1.4cqh;
+    font-size: 1.6cqh;
   }
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 800px) {
   #personality-icon {
     margin: 10px;
     padding: 0;
+    width: 22%;
   }
 
-  .personality>img {
+  #personality-info {
     width: 50%;
   }
 
@@ -395,6 +457,10 @@ h2 {
 
   .card {
     height: 25vh;
+  }
+
+  .contacts {
+    height: 15vh;
   }
 
   .redirect {

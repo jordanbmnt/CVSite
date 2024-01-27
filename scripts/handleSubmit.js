@@ -13,7 +13,12 @@ const handleSubmit = async (event) => {
     .then(async () => {
       await fetch(`/.netlify/functions/dbConnection?${urlFormParam}`).then(
         (response) => {
-          if (response.status == 200) window.alert("Sent");
+          if (response.status == 200) {
+            window.alert("Sent");
+            setTimeout(() => {
+              contactWindow.close();
+            }, 200);
+          }
           response.json();
         }
       );
