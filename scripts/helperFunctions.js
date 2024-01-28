@@ -3,7 +3,6 @@ const contacts = document.getElementsByClassName("contacts");
 const timeLine = document.getElementById("time-line");
 const seeMore = document.getElementsByClassName("see-more")[0];
 const container = document.getElementsByClassName("container")[0];
-let contactWindow;
 
 const openEducationSection = (e) => {
   const windowWidth = window.innerWidth;
@@ -59,8 +58,11 @@ const githubRedirect = () => {
 };
 
 const contactFormRedirect = () => {
-  contactWindow = window.open(
-    "https://jordanbmnt-cv.netlify.app/contact",
-    "_self"
-  );
+  window.open("/contact", "_self");
 };
+
+const homeRedirect = () => {
+  window.open("/", "_self");
+};
+
+document.getElementById("home-button").addEventListener("click", homeRedirect);

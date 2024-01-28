@@ -16,7 +16,7 @@ const handleSubmit = async (event) => {
           if (response.status == 200) {
             window.alert("Sent");
             setTimeout(() => {
-              contactWindow.close();
+              window.open("/", "_self");
             }, 200);
           }
           response.json();
