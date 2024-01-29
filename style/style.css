@@ -185,9 +185,25 @@ input[type=submit]:hover {
 
 .list {
   display: flex;
+  flex-flow: row;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.list div {
+  height: 100%;
+  border: 1px solid white;
+  display: flex;
   flex-flow: column;
-  flex-wrap: wrap;
-  list-style: circle;
+  justify-content: flex-start;
+  align-items: center;
+  width: 50%;
+  overflow-y: scroll;
+  margin-top: 10px;
+  border-top: none;
+  border-bottom: none;
+  font-size: 12px;
+  padding: 10px;
 }
 
 .contacts {
