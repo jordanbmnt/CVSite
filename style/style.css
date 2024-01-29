@@ -125,11 +125,11 @@ body:hover>#trailer {
 }
 
 .container {
+  display: none;
   overflow: hidden;
   scale: 0.9;
   width: 100vw;
   height: 100vh;
-  display: grid;
   grid-template-areas:
     "lh lh lh lh  lh  lh  xpEdu xpEdu"
     "ps ps ps skl skl skl xpEdu xpEdu"

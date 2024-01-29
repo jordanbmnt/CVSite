@@ -56,5 +56,6 @@ for (const card of cards) {
   }, 2800);
   setTimeout(() => {
     document.getElementsByClassName("container")[0].style.opacity = 1;
-  }, 100);
+    document.getElementsByClassName("container")[0].style.display = "grid";
+  }, 200);
 })();
