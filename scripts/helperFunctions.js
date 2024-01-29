@@ -61,6 +61,10 @@ const contactFormRedirect = () => {
   window.open("/contact", "_self");
 };
 
+const creditToRedirect = () => {
+  window.open("/creditTo", "_self");
+};
+
 const homeRedirect = () => {
   window.open("/", "_self");
 };

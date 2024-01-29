@@ -5,7 +5,7 @@ window.onmousemove = (e) => {
     y = e.clientY - trailer.offsetHeight / 2;
 
   const keyFrames = {
-    transform: `translate(${x}px, ${y}px)`,
+    transform: `translate(${x + 30}px, ${y + 30}px)`,
   };
 
   const z = {
@@ -33,14 +33,12 @@ window.onmousemove = (e) => {
     trailer.animate(z, {
       duration: 300,
       fill: "forwards",
-      transition: "3100ms",
     });
     trailer.textContent = e.target.alt;
   } else {
     trailer.animate(zReset, {
       duration: 300,
       fill: "forwards",
-      transition: "3100ms",
     });
   }
 };

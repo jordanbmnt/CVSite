@@ -19,6 +19,9 @@ document
 document
   .getElementById("github-link")
   .addEventListener("click", githubRedirect);
+document
+  .getElementById("credit-to-link")
+  .addEventListener("click", creditToRedirect);
 
 for (const card of cards) {
   card.addEventListener("click", (e) => {

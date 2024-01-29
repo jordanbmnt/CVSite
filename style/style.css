@@ -127,9 +127,12 @@ body:hover>#trailer {
   border: 2px solid aliceblue;
 }
 
-.links>button:nth-child(1):hover {
-  background-color: #080b1000;
+.links>button:nth-child(1):hover,
+button:hover,
+input[type=submit]:hover {
+  background-color: #080b106f;
   color: aliceblue;
+  scale: 1.08;
 }
 
 .links>button:nth-child(2):hover {
@@ -270,8 +273,7 @@ body:hover>#trailer {
 }
 
 .card .flip-card-front .icon {
-  animation: tiltIcon 3s infinite;
-  ;
+  transform: rotateY(0deg);
 }
 
 .flip-card-front:has(.icon),
@@ -343,23 +345,6 @@ h2 {
 #personality-icon,
 #personality-info {
   padding: 0 15px;
-}
-
-@keyframes tiltIcon {
-  0% {
-    scale: 0.9;
-    transform: rotateY(-14deg);
-  }
-
-  50% {
-    transform: rotateY(17deg);
-    background: rgba(67, 82, 123, 0.3);
-  }
-
-  100% {
-    scale: 0.9;
-    transform: rotateY(-14deg);
-  }
 }
 
 @keyframes tilt {
