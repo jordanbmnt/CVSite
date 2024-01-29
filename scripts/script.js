@@ -54,4 +54,7 @@ for (const card of cards) {
       fill: "forwards",
     });
   }, 2800);
+  setTimeout(() => {
+    document.getElementsByClassName("container")[0].style.opacity = 1;
+  }, 100);
 })();
