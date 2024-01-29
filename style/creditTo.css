@@ -1,0 +1,35 @@
+button {
+  position: absolute;
+  bottom: 10%;
+}
+
+button,
+.creditTo a {
+  box-shadow: -3px 4px 5px 0 rgba(31, 38, 135, 0.147);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  border: 1px solid rgba(255, 255, 255, 0.164);
+  border-radius: 10px;
+  padding: 20px;
+}
+
+.creditTo {
+  display: flex;
+  flex-flow: row;
+  justify-content: space-evenly;
+  align-items: center;
+  width: 100vw;
+  height: 100vh;
+  flex-wrap: wrap;
+}
+
+.creditTo a {
+  background: rgba(67, 82, 123, 0.25);
+  display: flex;
+  text-align: center;
+  text-decoration: none;
+  flex-flow: column;
+  align-items: center;
+  justify-content: center;
+  width: 200px;
+}

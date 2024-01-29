@@ -23,6 +23,10 @@
   transition: 500ms;
 }
 
+::-webkit-scrollbar {
+  width: 0px;
+}
+
 body,
 .logo,
 .logo-action,
@@ -260,6 +264,16 @@ body:hover>#trailer {
   border-radius: 10px;
 }
 
+.card .flip-card-front {
+  animation: tilt 3s infinite;
+  ;
+}
+
+.card .flip-card-front .icon {
+  animation: tiltIcon 3s infinite;
+  ;
+}
+
 .flip-card-front:has(.icon),
 .personality {
   justify-content: space-around;
@@ -329,6 +343,46 @@ h2 {
 #personality-icon,
 #personality-info {
   padding: 0 15px;
+}
+
+@keyframes tiltIcon {
+  0% {
+    scale: 0.9;
+    transform: rotateY(-14deg);
+  }
+
+  50% {
+    transform: rotateY(17deg);
+    background: rgba(67, 82, 123, 0.3);
+  }
+
+  100% {
+    scale: 0.9;
+    transform: rotateY(-14deg);
+  }
+}
+
+@keyframes tilt {
+  0% {
+    scale: 0.9;
+    transform: rotateY(-12deg);
+    border-right: 1px solid white;
+    border-left: none;
+  }
+
+  50% {
+    transform: rotateY(15deg);
+    background: rgba(67, 82, 123, 0.3);
+    border-left: 1px solid white;
+    border-right: none;
+  }
+
+  100% {
+    border-left: none;
+    border-right: 1px solid white;
+    scale: 0.9;
+    transform: rotateY(-12deg);
+  }
 }
 
 @keyframes pulse {
@@ -484,5 +538,10 @@ h2 {
     height: fit-content;
     padding: 5px;
     width: max-content;
+  }
+
+  .card .flip-card-front {
+    animation: tilt 3s infinite;
+    ;
   }
 }
