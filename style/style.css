@@ -584,6 +584,10 @@ h2 {
     height: 15vh;
   }
 
+  .contacts a {
+    font-size: 1.7cqh;
+  }
+
   .redirect {
     height: fit-content;
     padding: 5px;
