@@ -20,7 +20,7 @@
 }
 
 * {
-  transition: 900ms;
+  transition: 500ms;
 }
 
 body,
@@ -37,6 +37,8 @@ body,
 }
 
 body {
+  background-image: url("../images/Simple\ Shiny.svg");
+  background-size: cover;
   background-color: #080b10;
   height: 100vh;
   width: 100vw;
@@ -48,9 +50,17 @@ body {
 }
 
 #trailer {
+  text-overflow: clip;
+  font-weight: 200;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  font-size: 0.6rem;
   height: 3vw;
   width: 3vw;
-  background-color: rgb(240, 255, 241);
+  background-color: rgba(122, 39, 167, 0.692);
+  color: white;
   border-radius: 50%;
   position: fixed;
   left: 0;
@@ -185,13 +195,20 @@ body:hover>#trailer {
   box-sizing: border-box;
 }
 
+.list {
+  display: flex;
+  flex-flow: column;
+  flex-wrap: wrap;
+  list-style: circle;
+}
+
 .contacts {
   grid-area: con;
   box-sizing: border-box;
 }
 
 .contacts .flip-card-front {
-  scale: 0.98;
+  scale: 0.95;
   border-radius: 17px;
   background-color: hsla(224, 29%, 10%, 0.623);
   border: 1px solid white;
@@ -322,12 +339,12 @@ h2 {
 
   70% {
     transform: scale(1);
-    box-shadow: 0 0 0 10px rgba(0, 0, 0, 0);
+    box-shadow: 0 0 0 10px rgba(123, 39, 167, 0.19);
   }
 
   100% {
     transform: scale(0.95);
-    box-shadow: 0 0 0 0 rgba(0, 0, 0, 0);
+    box-shadow: 0 0 0 0 rgba(123, 39, 167, 0.19);
   }
 }
 
