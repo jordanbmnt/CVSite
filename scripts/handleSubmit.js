@@ -13,8 +13,13 @@ const handleSubmit = async (event) => {
     .then(async () => {
       await fetch(`/.netlify/functions/dbConnection?${urlFormParam}`).then(
         (response) => {
-          if (response.status == 200) window.alert("Sent");
-          response.json();
+          if (response.status == 200) {
+            window.alert("Sent");
+            setTimeout(() => {
+              window.open("/", "_self");
+            }, 200);
+          }
+          return;
         }
       );
     })

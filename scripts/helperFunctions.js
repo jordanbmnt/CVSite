@@ -9,6 +9,7 @@ const openEducationSection = (e) => {
 
   seeMore.style.justifyContent = "flex-end";
   educationButton.style.marginRight = "16px";
+  educationButton.style.marginTop = "40px";
   seeMore.style.zIndex = "1";
   seeMore.style.bottom = "93%";
   timeLine.style.scale = 1;
@@ -30,6 +31,7 @@ const openEducationSection = (e) => {
 
 const closeEducationSection = (e) => {
   educationButton.style.marginRight = "0";
+  educationButton.style.marginTop = "0";
   seeMore.style.justifyContent = "center";
   seeMore.style.position = "absolute";
   timeLine.style.scale = 0.7;
@@ -56,3 +58,17 @@ const personalityRedirect = () => {
 const githubRedirect = () => {
   window.open("https://github.com/jordanbmnt", "_blank");
 };
+
+const contactFormRedirect = () => {
+  window.open("/contact", "_self");
+};
+
+const creditToRedirect = () => {
+  window.open("/creditTo", "_self");
+};
+
+const homeRedirect = () => {
+  window.open("/", "_self");
+};
+
+document.getElementById("home-button").addEventListener("click", homeRedirect);

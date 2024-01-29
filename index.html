@@ -13,6 +13,10 @@
 </head>
 
 <body>
+  <div class="loading-screen">
+    <img id="personal-logo" src="/images/personalLogo.jpeg" alt="soy_jimb">
+    <h1>Welcome to my CV</h1>
+  </div>
   <div id="trailer"></div>
   <div class="container">
     <div class="⏹️ logo-action">
@@ -22,7 +26,7 @@
           My GitHub
           <span class="material-symbols-outlined"> data_object </span>
         </button>
-        <button class="redirect">
+        <button id="credit-to-link" class="redirect">
           Credit To
           <span class="material-symbols-outlined"> emoji_people </span>
         </button>
@@ -40,7 +44,7 @@
       </p>
     </div>
     <div class="⏹️ personality">
-      <img id="personality-icon" src="https://img.icons8.com/nolan/96/adaptable--v1.png" alt="Personality Scetion" />
+      <img id="personality-icon" src="https://img.icons8.com/nolan/96/adaptable--v1.png" alt="Personality Section" />
       <div id="personality-info">
         <h2>The Advocate</h2>
         <p>
@@ -55,18 +59,18 @@
     </div>
     <div class="⏹️ skills">
       <div id="secondary">
-        <img src="https://img.icons8.com/nolan/64/node-js.png" alt="node-js" />
-        <img src="https://img.icons8.com/nolan/64/react-native.png" alt="react-native" />
-        <img src="https://img.icons8.com/nolan/64/figma.png" alt="figma" />
-        <img src="https://img.icons8.com/nolan/64/org-unit.png" alt="org-unit" />
-        <img src="https://img.icons8.com/nolan/64/git.png" alt="git" />
-        <img src="https://img.icons8.com/nolan/64/c-sharp-logo.png" alt="c-sharp-logo" />
-        <img src="https://img.icons8.com/nolan/64/docker.png" alt="docker" />
-        <img src="https://img.icons8.com/nolan/512/github.png" alt="github" />
+        <img src="https://img.icons8.com/nolan/64/node-js.png" alt="Node JS" />
+        <img src="https://img.icons8.com/nolan/64/react-native.png" alt="React Native" />
+        <img src="https://img.icons8.com/nolan/64/figma.png" alt="Figma" />
+        <img src="https://img.icons8.com/nolan/64/org-unit.png" alt="Unit Testing" />
+        <img src="https://img.icons8.com/nolan/64/git.png" alt="Git" />
+        <img src="https://img.icons8.com/nolan/64/c-sharp-logo.png" alt="C Sharp" />
+        <img src="https://img.icons8.com/nolan/64/docker.png" alt="Docker" />
+        <img src="https://img.icons8.com/nolan/512/github.png" alt="GitHub" />
       </div>
       <div id="primary">
-        <img src="https://img.icons8.com/nolan/512/html-5.png" alt="html-5" />
-        <img src="https://img.icons8.com/nolan/512/css3.png" alt="css3" />
+        <img src="https://img.icons8.com/nolan/512/html-5.png" alt="HTML 5" />
+        <img src="https://img.icons8.com/nolan/512/css3.png" alt="CSS 3" />
       </div>
     </div>
     <div class="card xp-edu">
@@ -83,8 +87,9 @@
               <div class="date">2022-Current</div>
               <div class="title">Web Dev Intern</div>
               <div class="descr">
-                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quas
-                itaque hic quibusdam
+                I worked as a Web Dev Intern for BBD through Umuzi.org. Through this amazing opportunity we dived into
+                technologies such as React, React-Native, SQL, etc. This experience taught me a great deal of both
+                Front-End and Back-End and overall made me a better Full-Stack Dev.
               </div>
             </li>
             <li style="--accent-color: #fbca3e">
@@ -100,13 +105,6 @@
                 Developer.
               </div>
             </li>
-            <!-- <li style="--accent-color: #e24a68">
-              <div class="date">Jan 2020 - Feb 2021</div>
-              <div class="title">Host/Content Creator | Bigo Live Stream (Milk Army)</div>
-              <div class="descr">
-                Working with an amazing agency, I worked as a content creator doing live streams.
-              </div>
-            </li> -->
             <li style="--accent-color: #1b5f8c">
               <div class="date">Jan 2020 - Dec 2020</div>
               <div class="title">
@@ -125,24 +123,42 @@
     <div class="card achievements">
       <div class="flip-card-inner">
         <div class="flip-card-front">
-          <img class="icon" src="https://img.icons8.com/nolan/96/trophy.png" alt="Achievements" />
+          <img class="icon" src="https://img.icons8.com/nolan/96/trophy.png" alt="Achievement Section" />
         </div>
-        <div class="flip-card-back">
-          <h2>John Doe</h2>
-          <p>Architect & Engineer</p>
-          <p>We love that guy</p>
+        <div class="flip-card-back list">
+          <div class="roles">
+            <img src="https://img.icons8.com/nolan/96/conference.png" alt="roles" />
+            <h3>Roles:</h3>
+            <p>Junior Tech Lead</p>
+            <p>Director for TUTHSA</p>
+          </div>
+          <div class="certificate">
+            <img src="https://img.icons8.com/nolan/96/certificate.png" alt="certificate" />
+            <h3>Certificates:</h3>
+            <p>Intro to C#</p>
+            <p>Learn JavaScript</p>
+            <p>Learn Color Design</p>
+            <p>Frontend fundamentals
+              HTML 5 & CSS</p>
+          </div>
         </div>
       </div>
     </div>
-    <div class="card contacts">
+    <div class=" contacts">
       <div class="flip-card-inner">
-        <div class="flip-card-front">
-          <img class="icon" src="https://img.icons8.com/nolan/96/contact-card.png" alt="contact-card" />
-        </div>
-        <div class="flip-card-back">
-          <h2>John Doe</h2>
-          <p>Architect & Engineer</p>
-          <p>We love that guy</p>
+        <div class="flip-card-front" id="contact-info">
+          <button id="contact-me" class="redirect">Contact Me <span class="material-symbols-outlined">
+              connect_without_contact
+            </span></button>
+
+          <div class="contact-div">
+            <a href="mailto:jordanbmnt@gmail.com" target="_blank">Email Me <span class="material-symbols-outlined">
+                open_in_new
+              </span></a>
+            <a href="https://linktr.ee/soy_jimb" target="_blank">Link tree <span class="material-symbols-outlined">
+                open_in_new
+              </span></a>
+          </div>
         </div>
       </div>
     </div>

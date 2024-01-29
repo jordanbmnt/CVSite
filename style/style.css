@@ -1,7 +1,73 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;1,100&display=swap");
 
 * {
-  transition: 900ms;
+  transition: 500ms;
+}
+
+.loading-screen {
+  width: 100vw;
+  height: 100vh;
+  background-image: url("../images/Simple\ Shiny.svg");
+  background-size: cover;
+  position: absolute;
+  z-index: 1000;
+  flex-flow: column;
+}
+
+#personal-logo {
+  width: 200px;
+  aspect-ratio: 1;
+  border-radius: 50%;
+  animation: logoEntrance 2s ease 0s 1 normal forwards;
+  margin-left: 20px;
+}
+
+@keyframes logoEntrance {
+  0% {
+    animation-timing-function: ease-in;
+    opacity: 0;
+    transform: translateY(-250px);
+  }
+
+  38% {
+    animation-timing-function: ease-out;
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  55% {
+    animation-timing-function: ease-in;
+    transform: translateY(-65px);
+  }
+
+  72% {
+    animation-timing-function: ease-out;
+    transform: translateY(0);
+  }
+
+  81% {
+    animation-timing-function: ease-in;
+    transform: translateY(-28px);
+  }
+
+  90% {
+    animation-timing-function: ease-out;
+    transform: translateY(0);
+  }
+
+  95% {
+    animation-timing-function: ease-in;
+    transform: translateY(-8px);
+  }
+
+  100% {
+    animation-timing-function: ease-out;
+    transform: translateY(0);
+  }
+}
+
+::-webkit-scrollbar {
+  width: 0px;
 }
 
 body,
@@ -11,13 +77,16 @@ body,
 #primary,
 .flip-card-front:has(.icon),
 .personality,
-.redirect {
+.redirect,
+.loading-screen {
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
 body {
+  background-image: url("../images/Simple\ Shiny.svg");
+  background-size: cover;
   background-color: #080b10;
   height: 100vh;
   width: 100vw;
@@ -29,9 +98,17 @@ body {
 }
 
 #trailer {
+  text-overflow: clip;
+  font-weight: 200;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  font-size: 0.6rem;
   height: 3vw;
   width: 3vw;
-  background-color: rgb(240, 255, 241);
+  background-color: rgba(122, 39, 167, 0.692);
+  color: white;
   border-radius: 50%;
   position: fixed;
   left: 0;
@@ -85,6 +162,7 @@ body:hover>#trailer {
   justify-content: space-around;
   width: 200px;
   padding: 10% auto;
+  font-family: "Poppins", sans-serif;
 }
 
 .links>button:nth-child(2) {
@@ -93,9 +171,12 @@ body:hover>#trailer {
   border: 2px solid aliceblue;
 }
 
-.links>button:nth-child(1):hover {
-  background-color: #080b1000;
+.links>button:nth-child(1):hover,
+button:hover,
+input[type=submit]:hover {
+  background-color: #080b106f;
   color: aliceblue;
+  scale: 1.08;
 }
 
 .links>button:nth-child(2):hover {
@@ -165,10 +246,66 @@ body:hover>#trailer {
   box-sizing: border-box;
 }
 
+.list {
+  display: flex;
+  flex-flow: row;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.list div {
+  height: 100%;
+  border: 1px solid white;
+  display: flex;
+  flex-flow: column;
+  justify-content: flex-start;
+  align-items: center;
+  width: 50%;
+  overflow-y: scroll;
+  margin-top: 10px;
+  border-top: none;
+  border-bottom: none;
+  font-size: 12px;
+  padding: 10px;
+}
+
 .contacts {
   grid-area: con;
   box-sizing: border-box;
-  height: 98%;
+}
+
+.contacts .flip-card-front {
+  scale: 0.95;
+  border-radius: 17px;
+  background-color: hsla(224, 29%, 10%, 0.623);
+  border: 1px solid white;
+  letter-spacing: 1.3px;
+}
+
+#contact-info {
+  display: flex;
+  flex-flow: row;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+#contact-info button,
+.contact-div a {
+  display: flex;
+  justify-content: space-around;
+  width: 150px;
+  padding: 10% auto;
+  font-family: "Poppins", sans-serif;
+}
+
+.contact-div {
+  display: flex;
+  flex-flow: column;
+}
+
+.contact-div a {
+  text-decoration: none;
+  color: rgba(234, 245, 254, 0.834);
 }
 
 .card,
@@ -190,6 +327,15 @@ body:hover>#trailer {
   border-radius: 10px;
 }
 
+.card .flip-card-front {
+  animation: tilt 3s infinite;
+  ;
+}
+
+.card .flip-card-front .icon {
+  transform: rotateY(0deg);
+}
+
 .flip-card-front:has(.icon),
 .personality {
   justify-content: space-around;
@@ -208,7 +354,7 @@ h2 {
 }
 
 .personal-statement>p {
-  font-size: 2cqh;
+  font-size: 2.2cqh;
 }
 
 #personality-info {
@@ -261,6 +407,29 @@ h2 {
   padding: 0 15px;
 }
 
+@keyframes tilt {
+  0% {
+    scale: 0.9;
+    transform: rotateY(-12deg);
+    border-right: 1px solid white;
+    border-left: none;
+  }
+
+  50% {
+    transform: rotateY(15deg);
+    background: rgba(67, 82, 123, 0.3);
+    border-left: 1px solid white;
+    border-right: none;
+  }
+
+  100% {
+    border-left: none;
+    border-right: 1px solid white;
+    scale: 0.9;
+    transform: rotateY(-12deg);
+  }
+}
+
 @keyframes pulse {
   0% {
     transform: scale(0.95);
@@ -269,12 +438,12 @@ h2 {
 
   70% {
     transform: scale(1);
-    box-shadow: 0 0 0 10px rgba(0, 0, 0, 0);
+    box-shadow: 0 0 0 10px rgba(123, 39, 167, 0.19);
   }
 
   100% {
     transform: scale(0.95);
-    box-shadow: 0 0 0 0 rgba(0, 0, 0, 0);
+    box-shadow: 0 0 0 0 rgba(123, 39, 167, 0.19);
   }
 }
 
@@ -301,22 +470,31 @@ h2 {
     grid-template-rows: repeat(7, 1fr);
   }
 
+  .contacts .flip-card-front {
+    font-size: 2cqw;
+  }
+
+  #personality-info {
+    box-sizing: border-box;
+  }
+
   #personality-info>p {
-    font-size: 1.4cqw;
+    font-size: 1.3cqw;
   }
 
   .personal-statement>p {
-    font-size: 1.4cqh;
+    font-size: 1.6cqh;
   }
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 800px) {
   #personality-icon {
     margin: 10px;
     padding: 0;
+    width: 22%;
   }
 
-  .personality>img {
+  #personality-info {
     width: 50%;
   }
 
@@ -397,9 +575,18 @@ h2 {
     height: 25vh;
   }
 
+  .contacts {
+    height: 15vh;
+  }
+
   .redirect {
     height: fit-content;
     padding: 5px;
     width: max-content;
+  }
+
+  .card .flip-card-front {
+    animation: tilt 3s infinite;
+    ;
   }
 }

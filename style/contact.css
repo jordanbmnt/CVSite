@@ -5,6 +5,7 @@
 }
 
 input[type=text],
+input[type=email],
 select,
 textarea {
   background: rgba(67, 82, 123, 0.25);
@@ -19,7 +20,8 @@ textarea {
   color: white;
 }
 
-input[type=submit] {
+input[type=submit],
+button {
   background: rgba(73, 93, 147, 0.955);
   color: white;
   padding: 12px 20px;
@@ -28,7 +30,20 @@ input[type=submit] {
   cursor: pointer;
 }
 
-input[type=submit]:hover {
+.nav-buttons {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  align-items: center;
+}
+
+button {
+  border: 1px solid hsl(224, 34%, 70%);
+  background-color: #cccccc00;
+}
+
+input[type=submit]:hover,
+button:hover {
   background: rgba(67, 82, 123, 0.955);
 }
 

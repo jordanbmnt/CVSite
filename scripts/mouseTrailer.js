@@ -5,23 +5,40 @@ window.onmousemove = (e) => {
     y = e.clientY - trailer.offsetHeight / 2;
 
   const keyFrames = {
-    transform: `translate(${x}px, ${y}px)`,
+    transform: `translate(${x + 30}px, ${y + 30}px)`,
+  };
+
+  const z = {
+    zIndex: 100,
+    border: "2px solid white",
+    padding: "12px",
+    color: "white",
+    textContent: e.target.alt,
+    backgroundColor: "rgba(122, 39, 167, 0.8)",
+  };
+
+  const zReset = {
+    zIndex: 0,
+    border: "none",
+    padding: "0px",
+    color: "rgba(0, 0, 0, 0)",
+    backgroundColor: "rgba(122, 39, 167, 0.692)",
   };
 
   trailer.animate(keyFrames, {
     duration: 900,
     fill: "forwards",
   });
+  if (e.target.alt) {
+    trailer.animate(z, {
+      duration: 300,
+      fill: "forwards",
+    });
+    trailer.textContent = e.target.alt;
+  } else {
+    trailer.animate(zReset, {
+      duration: 300,
+      fill: "forwards",
+    });
+  }
 };
-
-// window.onmousedown = e => {
-// console.log(e.target.className, e.target.parentNode.className)
-//   const keyFrames = {
-//     backgroundColor: counter % 2 === 0 ? 'orange' : "white"
-//   }
-//   trailer.animate(keyFrames, {
-//     duration: 900,
-//     fill: "forwards"
-//   })
-//   console.log(trailer)
-// }
