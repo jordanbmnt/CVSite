@@ -489,6 +489,10 @@ h2 {
 }
 
 @media screen and (max-width: 800px) {
+  #trailer {
+    display: none;
+  }
+
   #personality-icon {
     margin: 10px;
     padding: 0;
