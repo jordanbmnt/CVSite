@@ -19,7 +19,7 @@ const handleSubmit = async (event) => {
               window.open("/", "_self");
             }, 200);
           }
-          response.json();
+          return;
         }
       );
     })
