@@ -1,5 +1,6 @@
 const cards = document.getElementsByClassName("card");
 const educationButton = document.getElementById("education-button");
+const loadingScreen = document.getElementsByClassName("loading-screen")[0];
 let eduOpen = false;
 
 educationButton.addEventListener("click", (e) => {
@@ -38,3 +39,19 @@ for (const card of cards) {
     }
   });
 }
+
+(() => {
+  setTimeout(() => {
+    const easeOut = {
+      zIndex: 0,
+      opacity: 0,
+      display: "none",
+      backgroundColor: "black",
+    };
+
+    loadingScreen.animate(easeOut, {
+      duration: 1000,
+      fill: "forwards",
+    });
+  }, 2800);
+})();
