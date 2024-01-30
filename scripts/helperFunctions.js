@@ -23,6 +23,7 @@ const openEducationSection = (e) => {
   elementStyle.overflowY = "scroll";
   achievements.opacity = 0;
   educationButton.textContent = "See less";
+  e.target.parentNode.parentNode.scrollTop = 0;
   contacts.opacity = 0;
   setTimeout(() => {
     achievements.display = "none";
@@ -41,7 +42,8 @@ const closeEducationSection = (e) => {
   seeMore.style.zIndex = "3";
   seeMore.style.bottom = 0;
   timeLine.style.scale = 0.7;
-  elementStyle.overflowY = "hidden";
+  elementStyle.overflowY = "scroll";
+  e.target.parentNode.parentNode.scrollTop = 0;
   elementStyle.height = "";
   elementStyle.width = "";
   elementStyle.padding = "";
