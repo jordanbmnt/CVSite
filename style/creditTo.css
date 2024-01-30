@@ -1,48 +1,52 @@
-#home {
+#home,
+.creditTo,
+.creditTo a {
   display: flex;
   align-items: center;
+}
+
+#home,
+.creditTo {
   justify-content: space-evenly;
+}
+
+#home {
+  width: 100px;
   position: absolute;
   bottom: 10%;
   text-decoration: none;
   color: aliceblue;
-  width: 100px;
 }
 
 #home:hover {
-  background-color: rgba(221, 239, 255, 0.844);
   color: black;
+  background-color: rgba(221, 239, 255, 0.844);
 }
 
 #home,
 .creditTo a {
+  padding: 10px;
   box-shadow: -3px 4px 5px 0 rgba(31, 38, 135, 0.147);
   backdrop-filter: blur(14px);
   -webkit-backdrop-filter: blur(14px);
   border: 1px solid rgba(255, 255, 255, 0.164);
   border-radius: 10px;
-  padding: 10px;
 }
 
 .creditTo {
-  display: flex;
-  flex-flow: row;
-  justify-content: space-evenly;
-  align-items: center;
   width: 100vw;
   height: 100vh;
+  flex-flow: row;
   flex-wrap: wrap;
 }
 
 .creditTo a {
-  background: rgba(67, 82, 123, 0.25);
-  display: flex;
+  width: 200px;
+  flex-flow: column;
+  justify-content: center;
   text-align: center;
   text-decoration: none;
-  flex-flow: column;
-  align-items: center;
-  justify-content: center;
-  width: 200px;
+  background: rgba(67, 82, 123, 0.25);
   color: rgba(240, 248, 255, 0.527);
 }
 
@@ -52,7 +56,7 @@
   }
 
   .creditTo a {
-    margin: 50px;
+    margin: 80px;
   }
 
   #home {

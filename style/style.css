@@ -4,132 +4,14 @@
   transition: 500ms;
 }
 
-.loading-screen {
-  width: 100vw;
-  height: 100vh;
-  background-image: url("../images/Simple\ Shiny.svg");
-  background-size: cover;
-  position: absolute;
-  z-index: 1000;
-  flex-flow: column;
-}
-
-#personal-logo {
-  width: 200px;
-  aspect-ratio: 1;
-  border-radius: 50%;
-  animation: logoEntrance 2s ease 0s 1 normal forwards;
-  margin-left: 20px;
-}
-
-@keyframes logoEntrance {
-  0% {
-    animation-timing-function: ease-in;
-    opacity: 0;
-    transform: translateY(-250px);
-  }
-
-  38% {
-    animation-timing-function: ease-out;
-    opacity: 1;
-    transform: translateY(0);
-  }
-
-  55% {
-    animation-timing-function: ease-in;
-    transform: translateY(-65px);
-  }
-
-  72% {
-    animation-timing-function: ease-out;
-    transform: translateY(0);
-  }
-
-  81% {
-    animation-timing-function: ease-in;
-    transform: translateY(-28px);
-  }
-
-  90% {
-    animation-timing-function: ease-out;
-    transform: translateY(0);
-  }
-
-  95% {
-    animation-timing-function: ease-in;
-    transform: translateY(-8px);
-  }
-
-  100% {
-    animation-timing-function: ease-out;
-    transform: translateY(0);
-  }
-}
-
 ::-webkit-scrollbar {
   width: 0px;
-}
-
-body,
-.logo,
-.logo-action,
-#secondary,
-#primary,
-.flip-card-front:has(.icon),
-.personality,
-.redirect,
-.loading-screen {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-body {
-  background-image: url("../images/Simple\ Shiny.svg");
-  background-size: cover;
-  background-color: #080b10;
-  height: 100vh;
-  width: 100vw;
-  margin: 0;
-  padding: 0;
-  overflow: hidden;
-  font-family: "Poppins", sans-serif;
-  color: aliceblue;
-}
-
-#trailer {
-  text-overflow: clip;
-  font-weight: 200;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
-  font-size: 0.6rem;
-  height: 3vw;
-  width: 3vw;
-  background-color: rgba(122, 39, 167, 0.692);
-  color: white;
-  border-radius: 50%;
-  position: fixed;
-  left: 0;
-  top: 0;
-  z-index: -1;
-  pointer-events: none;
-  opacity: 0;
-  animation: pulse 2s infinite;
-  transition: opacity 500ms ease;
-}
-
-body:hover>#trailer {
-  opacity: 1;
 }
 
 .container {
   display: none;
   overflow: hidden;
   scale: 0.9;
-  width: 100vw;
-  height: 100vh;
   grid-template-areas:
     "lh lh lh lh  lh  lh  xpEdu xpEdu"
     "ps ps ps skl skl skl xpEdu xpEdu"
@@ -142,6 +24,92 @@ body:hover>#trailer {
   grid-template-columns: repeat(8, 1fr);
   grid-template-rows: repeat(7, 1fr);
   opacity: 0;
+}
+
+body,
+.logo,
+.logo-action,
+#secondary,
+#primary,
+.flip-card-front:has(.icon),
+.personality,
+.redirect,
+.loading-screen,
+#trailer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+body,
+.loading-screen,
+.container {
+  width: 100vw;
+  height: 100vh;
+}
+
+.loading-screen,
+.skills,
+.list div,
+.contact-div,
+#personality-info {
+  flex-flow: column;
+}
+
+.loading-screen,
+body {
+  background-image: url("../images/Simple\ Shiny.svg");
+  background-size: cover;
+  background-image: url("../images/Simple\ Shiny.svg");
+  background-size: cover;
+}
+
+#personal-logo,
+#trailer {
+  border-radius: 50%;
+  aspect-ratio: 1;
+}
+
+.loading-screen {
+  position: absolute;
+  z-index: 1000;
+}
+
+#personal-logo {
+  width: 200px;
+  margin-left: 20px;
+  animation: logoEntrance 2s ease 0s 1 normal forwards;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  font-family: "Poppins", sans-serif;
+  background-color: #080b10;
+  color: aliceblue;
+}
+
+#trailer {
+  position: fixed;
+  width: 3vw;
+  opacity: 0;
+  left: 0;
+  top: 0;
+  text-overflow: clip;
+  font-weight: 200;
+  text-align: center;
+  font-size: 0.6rem;
+  background-color: rgba(122, 39, 167, 0.692);
+  color: white;
+  pointer-events: none;
+  transition: opacity 500ms ease;
+  animation: pulse 2s infinite;
+  z-index: -1;
+}
+
+body:hover>#trailer {
+  opacity: 1;
 }
 
 .logo {
@@ -212,7 +180,6 @@ input[type=submit]:hover {
   grid-area: skl;
   box-sizing: border-box;
   display: flex;
-  flex-flow: column;
 }
 
 #secondary {
@@ -258,7 +225,6 @@ input[type=submit]:hover {
   height: 100%;
   border: 1px solid white;
   display: flex;
-  flex-flow: column;
   justify-content: flex-start;
   align-items: center;
   width: 50%;
@@ -301,7 +267,6 @@ input[type=submit]:hover {
 
 .contact-div {
   display: flex;
-  flex-flow: column;
 }
 
 .contact-div a {
@@ -322,7 +287,6 @@ input[type=submit]:hover {
 .flip-card-back,
 .card {
   background: rgba(67, 82, 123, 0.25);
-  /* box-shadow: -3px 4px 5px 0 rgba(31, 38, 135, 0.147); */
   backdrop-filter: blur(14px);
   -webkit-backdrop-filter: blur(14px);
   border-radius: 10px;
@@ -330,7 +294,6 @@ input[type=submit]:hover {
 
 .card .flip-card-front {
   animation: tilt 3s infinite;
-  ;
 }
 
 .card .flip-card-front .icon {
@@ -360,7 +323,6 @@ h2 {
 
 #personality-info {
   display: flex;
-  flex-flow: column;
   align-items: flex-start;
   justify-content: center;
 }
@@ -408,6 +370,11 @@ h2 {
   padding: 0 15px;
 }
 
+.flip {
+  scale: 0.9;
+  background-color: rgba(240, 248, 255, 0.699);
+}
+
 @keyframes tilt {
   0% {
     scale: 0.9;
@@ -448,9 +415,48 @@ h2 {
   }
 }
 
-.flip {
-  scale: 0.9;
-  background-color: rgba(240, 248, 255, 0.699);
+@keyframes logoEntrance {
+  0% {
+    animation-timing-function: ease-in;
+    opacity: 0;
+    transform: translateY(-250px);
+  }
+
+  38% {
+    animation-timing-function: ease-out;
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  55% {
+    animation-timing-function: ease-in;
+    transform: translateY(-65px);
+  }
+
+  72% {
+    animation-timing-function: ease-out;
+    transform: translateY(0);
+  }
+
+  81% {
+    animation-timing-function: ease-in;
+    transform: translateY(-28px);
+  }
+
+  90% {
+    animation-timing-function: ease-out;
+    transform: translateY(0);
+  }
+
+  95% {
+    animation-timing-function: ease-in;
+    transform: translateY(-8px);
+  }
+
+  100% {
+    animation-timing-function: ease-out;
+    transform: translateY(0);
+  }
 }
 
 @media screen and (max-width: 1200px) {
