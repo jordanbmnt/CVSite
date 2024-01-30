@@ -9,7 +9,9 @@
   height: 100%;
   text-align: center;
   transition: transform 0.8s;
+  -webkit-transition: transform 0.8s;
   transform-style: preserve-3d;
+  -webkit-transform-style: preserve-3d;
   z-index: 1;
 }
 
@@ -33,6 +35,7 @@
   justify-content: center;
   color: white;
   transform: rotateY(180deg);
+  -webkit-transform: rotateY(180deg);
   background-color: #151b26;
   border: 3px solid rgba(240, 248, 255, 0.43);
   overflow: hidden;
