@@ -9,6 +9,7 @@ const handleSubmit = async (event) => {
     zIndex: 100,
     opacity: 1,
   };
+
   const loadingVisibilityOff = {
     zIndex: 0,
     opacity: 0,

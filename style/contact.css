@@ -30,6 +30,11 @@ button {
   cursor: pointer;
 }
 
+input[type=submit]:hover,
+button:hover {
+  background: rgba(67, 82, 123, 0.955);
+}
+
 .nav-buttons {
   display: flex;
   width: 100%;
@@ -42,17 +47,26 @@ button {
   background-color: #cccccc00;
 }
 
-input[type=submit]:hover,
-button:hover {
-  background: rgba(67, 82, 123, 0.955);
+.loading-send,
+.loading-animation {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.contact,
+.circle {
+  box-shadow: -3px 4px 5px 0 rgba(31, 38, 135, 0.147);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  box-shadow: -3px 4px 5px 0 rgba(31, 38, 135, 0.147);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
 }
 
 .contact {
   width: 60vw;
   background: rgba(67, 82, 123, 0.25);
-  box-shadow: -3px 4px 5px 0 rgba(31, 38, 135, 0.147);
-  backdrop-filter: blur(14px);
-  -webkit-backdrop-filter: blur(14px);
   border-radius: 10px;
   padding: 20px;
 }
@@ -60,13 +74,6 @@ button:hover {
 .loading-send {
   z-index: 0;
   opacity: 0;
-}
-
-.loading-send,
-.loading-animation {
-  display: flex;
-  align-items: center;
-  justify-content: center;
 }
 
 .loading-send {
@@ -84,9 +91,6 @@ button:hover {
   width: 50px;
   aspect-ratio: 1;
   background: rgba(123, 67, 121, 0.25);
-  box-shadow: -3px 4px 5px 0 rgba(31, 38, 135, 0.147);
-  backdrop-filter: blur(14px);
-  -webkit-backdrop-filter: blur(14px);
   animation: load 3s infinite ease alternate;
   border: 1px solid rgba(245, 222, 179, 0.482);
   transform: translateY(50px);
