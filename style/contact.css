@@ -56,3 +56,64 @@ button:hover {
   border-radius: 10px;
   padding: 20px;
 }
+
+.loading-send {
+  z-index: 0;
+  opacity: 0;
+}
+
+.loading-send,
+.loading-animation {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.loading-send {
+  width: 100vw;
+  height: 100vh;
+  position: absolute;
+}
+
+.loading-animation {
+  flex-flow: row;
+}
+
+.circle {
+  border-radius: 50%;
+  width: 50px;
+  aspect-ratio: 1;
+  background: rgba(123, 67, 121, 0.25);
+  box-shadow: -3px 4px 5px 0 rgba(31, 38, 135, 0.147);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  animation: load 3s infinite ease alternate;
+  border: 1px solid rgba(245, 222, 179, 0.482);
+  transform: translateY(50px);
+}
+
+.circle:nth-child(1) {
+  animation-delay: 0.5s;
+}
+
+.circle:nth-child(2) {
+  animation-delay: 1s;
+}
+
+@keyframes load {
+  0% {
+    scale: 1;
+    transform: translateY(50px);
+  }
+
+  50% {
+    background-color: rgb(21, 43, 83);
+    border: 1px solid rgba(207, 179, 245, 0.482);
+    scale: 1.2;
+  }
+
+  100% {
+    transform: translateY(-50px);
+    scale: 1;
+  }
+}
