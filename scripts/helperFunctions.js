@@ -69,9 +69,3 @@ const contactFormRedirect = () => {
 const creditToRedirect = () => {
   window.open("/creditTo", "_self");
 };
-
-const homeRedirect = () => {
-  window.open("/", "_self");
-};
-
-document.getElementById("home-button").addEventListener("click", homeRedirect);
