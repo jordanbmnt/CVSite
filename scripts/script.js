@@ -40,7 +40,7 @@ for (const card of cards) {
   });
 }
 
-(() => {
+(async () => {
   setTimeout(() => {
     const easeOut = {
       zIndex: 0,
@@ -50,12 +50,12 @@ for (const card of cards) {
     };
 
     loadingScreen.animate(easeOut, {
-      duration: 1000,
+      duration: 2000,
       fill: "forwards",
     });
   }, 2800);
   setTimeout(() => {
     document.getElementsByClassName("container")[0].style.opacity = 1;
     document.getElementsByClassName("container")[0].style.display = "grid";
-  }, 200);
+  }, 800);
 })();
