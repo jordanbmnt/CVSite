@@ -47,6 +47,14 @@
 }
 
 @media screen and (max-width: 800px) {
+  .creditTo {
+    overflow-y: scroll;
+  }
+
+  .creditTo a {
+    margin: 50px;
+  }
+
   #home {
     right: 20px;
     bottom: 40px;
