@@ -110,7 +110,7 @@ body {
   z-index: -1;
 }
 
-body:hover > #trailer {
+body:hover>#trailer {
   opacity: 1;
 }
 
@@ -128,7 +128,7 @@ body:hover > #trailer {
   justify-content: space-between;
 }
 
-.links > button {
+.links>button {
   display: flex;
   justify-content: space-around;
   width: 200px;
@@ -136,13 +136,13 @@ body:hover > #trailer {
   font-family: "Poppins", sans-serif;
 }
 
-.links > button:nth-child(2) {
+.links>button:nth-child(2) {
   background-color: #080b1000;
   color: aliceblue;
   border: 2px solid aliceblue;
 }
 
-.links > button:nth-child(1):hover,
+.links>button:nth-child(1):hover,
 button:hover,
 input[type="submit"]:hover {
   background-color: #080b106f;
@@ -150,7 +150,7 @@ input[type="submit"]:hover {
   scale: 1.08;
 }
 
-.links > button:nth-child(2):hover {
+.links>button:nth-child(2):hover {
   background-color: aliceblue;
   color: #000000;
   border: 2px solid #000000;
@@ -191,7 +191,7 @@ input[type="submit"]:hover {
   padding: 0 20%;
 }
 
-#secondary > img {
+#secondary>img {
   width: 23%;
   aspect-ratio: 1;
 }
@@ -201,7 +201,7 @@ input[type="submit"]:hover {
   height: 60%;
 }
 
-#primary > img {
+#primary>img {
   width: 50%;
   display: grid;
 }
@@ -322,7 +322,7 @@ h2 {
   font-size: clamp(1rem, 1.7vw, 2rem);
 }
 
-.personal-statement > p {
+.personal-statement>p {
   font-size: 2.2cqh;
 }
 
@@ -333,12 +333,12 @@ h2 {
   scale: 0.8;
 }
 
-#personality-info > h2 {
+#personality-info>h2 {
   font-weight: 300;
   margin: 0;
 }
 
-#personality-info > p {
+#personality-info>p {
   font-size: 1cqw;
   margin-top: 5px;
   margin-bottom: 10px;
@@ -514,17 +514,18 @@ h2 {
     box-sizing: border-box;
   }
 
-  #personality-info > p {
+  #personality-info>p {
     font-size: 1.3cqw;
   }
 
-  .personal-statement > p {
+  .personal-statement>p {
     font-size: 1.6cqh;
   }
 }
 
 @media screen and (max-width: 800px) {
-  .links > button,
+
+  .links>button,
   .redirect,
   #contact-me {
     width: 45cqw;
@@ -586,11 +587,11 @@ h2 {
     color: rgba(234, 245, 254, 0.616);
   }
 
-  .personal-statement > h2 {
+  .personal-statement>h2 {
     margin-bottom: 10px;
   }
 
-  .personal-statement > p {
+  .personal-statement>p {
     margin-top: 5px;
     font-size: 1.7cqh;
   }
@@ -600,19 +601,19 @@ h2 {
     height: max-content;
   }
 
-  #personality-info > h2,
+  #personality-info>h2,
   h2 {
     font-size: 3.1cqh;
   }
 
-  #personality-info > p {
+  #personality-info>p {
     margin-top: 3px;
     margin-bottom: 10px;
     font-size: 1.7cqh;
     font-weight: 100;
   }
 
-  #primary > img {
+  #primary>img {
     width: 40%;
     display: grid;
   }
@@ -633,6 +634,7 @@ h2 {
   .redirect {
     height: fit-content;
     padding: 5px;
+    margin: 10px;
     width: max-content;
   }
 
