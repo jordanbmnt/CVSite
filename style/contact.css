@@ -127,3 +127,17 @@ button {
     scale: 1;
   }
 }
+
+@media screen and (max-width: 350px) {
+  .nav-buttons {
+    height: 100px;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+  }
+
+  .nav-buttons button,
+  .nav-buttons input {
+    width: 160px;
+  }
+}
