@@ -50,8 +50,8 @@ body,
 
 .loading-screen,
 .skills,
-.list div,
-.contact-div,
+.list section,
+.contact-section,
 #personality-info {
   flex-flow: column;
 }
@@ -223,7 +223,7 @@ input[type=submit]:hover {
   align-items: center;
 }
 
-.list div {
+.list section {
   height: 100%;
   border: 1px solid white;
   display: flex;
@@ -259,7 +259,7 @@ input[type=submit]:hover {
 }
 
 #contact-info button,
-.contact-div a {
+.contact-section a {
   display: flex;
   justify-content: space-around;
   width: 150px;
@@ -267,11 +267,11 @@ input[type=submit]:hover {
   font-family: "Poppins", sans-serif;
 }
 
-.contact-div {
+.contact-section {
   display: flex;
 }
 
-.contact-div a {
+.contact-section a {
   text-decoration: none;
   color: rgba(234, 245, 254, 0.834);
 }
@@ -524,6 +524,10 @@ h2 {
 }
 
 @media screen and (max-width: 800px) {
+  .links>button{
+    width: 45cqw;
+  }
+
   #trailer {
     display: none;
   }
