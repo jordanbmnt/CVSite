@@ -144,7 +144,7 @@ body:hover>#trailer {
 
 .links>button:nth-child(1):hover,
 button:hover,
-input[type=submit]:hover {
+input[type="submit"]:hover {
   background-color: #080b106f;
   color: aliceblue;
   scale: 1.08;
@@ -378,7 +378,6 @@ h2 {
 }
 
 .flip {
-  scale: 0.9;
   background-color: rgba(240, 248, 255, 0.699);
 }
 
@@ -519,12 +518,15 @@ h2 {
   }
 
   .personal-statement>p {
-    font-size: 1.6cqh;
+    font-size: 1.4cqh;
   }
 }
 
 @media screen and (max-width: 800px) {
-  .links>button{
+
+  .links>button,
+  .redirect,
+  #contact-me {
     width: 45cqw;
   }
 
@@ -631,11 +633,11 @@ h2 {
   .redirect {
     height: fit-content;
     padding: 5px;
+    margin: 10px;
     width: max-content;
   }
 
   .card .flip-card-front {
     animation: tilt 3s infinite;
-    ;
   }
 }
